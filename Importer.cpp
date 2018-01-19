@@ -12,10 +12,10 @@
 #include "DataCenter.h"
 
 
-void Importer::import() {
+void Importer::import(std::string filename) {
 
     std::fstream importer;
-    importer.open("../ewf.txt");
+    importer.open(filename);
     if (importer.is_open()) {
         std::string elementsCountLine;
         getline(importer,elementsCountLine);

@@ -2,6 +2,6 @@
 #include "Importer.h"
 int main() {
     std::cout << "Hello, World!" << std::endl;
-    Importer::import();
+    Importer::import("../ewf.txt");
     return 0;
 }

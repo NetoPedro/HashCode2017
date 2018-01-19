@@ -7,7 +7,7 @@
 
 
 class Importer {
-public : static void import();
+public : static void import(std::string filename);
 };
 
 
