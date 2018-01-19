@@ -33,3 +33,12 @@ void GeneticAlgorithm::crossover(int geneSize) {
     }
 
 }
+//Tournament selection 
+void GeneticAlgorithm::selection() {
+    for (int j = 0; j < POPULATION_SIZE ; j+=2) {
+        /*   auto it1 = std::next(this->population.begin(), j);
+           std::list<int> parent1 = ( std::list<int>) *it1;
+           auto it2 = std::next(this->population.begin(), j+1);*/
+
+    }
+}
