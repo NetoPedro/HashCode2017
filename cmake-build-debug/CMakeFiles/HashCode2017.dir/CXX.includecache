@@ -40,6 +40,20 @@ Video.h
 CacheServer.h
 /Users/pedroneto/Desktop/HashCode2017/CacheServer.h
 
+/Users/pedroneto/Desktop/HashCode2017/GeneticAlgorithm.cpp
+GeneticAlgorithm.h
+/Users/pedroneto/Desktop/HashCode2017/GeneticAlgorithm.h
+
+/Users/pedroneto/Desktop/HashCode2017/GeneticAlgorithm.h
+list
+-
+map
+-
+iostream
+-
+DataCenter.h
+/Users/pedroneto/Desktop/HashCode2017/DataCenter.h
+
 /Users/pedroneto/Desktop/HashCode2017/Importer.cpp
 fstream
 -
