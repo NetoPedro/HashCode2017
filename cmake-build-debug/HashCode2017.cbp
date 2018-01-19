@@ -100,6 +100,12 @@
 		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/Endpoint.h">
 			<Option target="HashCode2017"/>
 		</Unit>
+		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/GeneticAlgorithm.cpp">
+			<Option target="HashCode2017"/>
+		</Unit>
+		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/GeneticAlgorithm.h">
+			<Option target="HashCode2017"/>
+		</Unit>
 		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/Importer.cpp">
 			<Option target="HashCode2017"/>
 		</Unit>
