@@ -52,3 +52,11 @@ void GeneticAlgorithm::mutation() {
 
     }
 }
+
+float GeneticAlgorithm::fitness(std::list<int> chromosome) {
+    return 0 ;
+}
+
+float GeneticAlgorithm::generateInitialPopulation(int populationElementsCount, int geneSize) {
+    return 0 ; 
+}
