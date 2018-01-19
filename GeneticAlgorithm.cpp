@@ -44,7 +44,7 @@ void GeneticAlgorithm::selection() {
 }
 
 void GeneticAlgorithm::mutation() {
-    for (std::list<int> chromosome  : this->population) {
+    for (std::list<std::string> chromosome  : this->population) {
         int rand = std::rand();
         if (rand <= MUTATION_TAX){
             //Apply mutation
@@ -53,10 +53,10 @@ void GeneticAlgorithm::mutation() {
     }
 }
 
-float GeneticAlgorithm::fitness(std::list<int> chromosome) {
+float GeneticAlgorithm::fitness(std::list<std::string> chromosome) {
     return 0 ;
 }
 
 float GeneticAlgorithm::generateInitialPopulation(int populationElementsCount, int geneSize) {
-    return 0 ; 
+    return 0 ;
 }

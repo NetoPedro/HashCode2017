@@ -13,11 +13,11 @@
 
 class GeneticAlgorithm {
 public:
-    std::list<std::list<int>> population;
+    std::list<std::list<std::string>> population;
     void init(int generations,DataCenter dataCenter,int geneSize);
 private:
     float generateInitialPopulation(int populationElementsCount,int geneSize);
-    float fitness(std::list<int> chromosome) ;
+    float fitness(std::list<std::string> chromosome) ;
     void selection();
     void mutation();
     void crossover(int geneSize);
