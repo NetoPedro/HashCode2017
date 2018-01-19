@@ -16,7 +16,7 @@ public:
     std::list<std::list<int>> population;
     void init(int generations,DataCenter dataCenter,int geneSize);
 private:
-    float generateInitialPopulation(int populationElementsCount);
+    float generateInitialPopulation(int populationElementsCount,int geneSize);
     float fitness(std::list<int> chromosome) ;
     void selection();
     void mutation();
