@@ -82,40 +82,40 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/CacheServer.cpp">
+		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/GA/GeneticAlgorithm.cpp">
 			<Option target="HashCode2017"/>
 		</Unit>
-		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/CacheServer.h">
+		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/GA/GeneticAlgorithm.h">
 			<Option target="HashCode2017"/>
 		</Unit>
-		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/DataCenter.cpp">
+		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/Model/CacheServer.cpp">
 			<Option target="HashCode2017"/>
 		</Unit>
-		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/DataCenter.h">
+		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/Model/CacheServer.h">
 			<Option target="HashCode2017"/>
 		</Unit>
-		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/Endpoint.cpp">
+		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/Model/DataCenter.cpp">
 			<Option target="HashCode2017"/>
 		</Unit>
-		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/Endpoint.h">
+		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/Model/DataCenter.h">
 			<Option target="HashCode2017"/>
 		</Unit>
-		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/GeneticAlgorithm.cpp">
+		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/Model/Endpoint.cpp">
 			<Option target="HashCode2017"/>
 		</Unit>
-		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/GeneticAlgorithm.h">
+		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/Model/Endpoint.h">
 			<Option target="HashCode2017"/>
 		</Unit>
-		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/Importer.cpp">
+		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/Model/Video.cpp">
 			<Option target="HashCode2017"/>
 		</Unit>
-		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/Importer.h">
+		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/Model/Video.h">
 			<Option target="HashCode2017"/>
 		</Unit>
-		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/Video.cpp">
+		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/Scanner/Importer.cpp">
 			<Option target="HashCode2017"/>
 		</Unit>
-		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/Video.h">
+		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/Scanner/Importer.h">
 			<Option target="HashCode2017"/>
 		</Unit>
 		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/main.cpp">

@@ -6,10 +6,10 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include "Endpoint.h"
-#include "Video.h"
+#include "../Model/Endpoint.h"
+#include "../Model/Video.h"
 #include "Importer.h"
-#include "DataCenter.h"
+#include "../Model/DataCenter.h"
 
 
 void Importer::import(std::string filename) {
@@ -92,6 +92,6 @@ void Importer::import(std::string filename) {
 
         std::cout << "";
     }
-    importer.close(); // Close the file 
+    importer.close(); // Close the file
 
 }

@@ -1,11 +1,11 @@
 file(REMOVE_RECURSE
   "CMakeFiles/HashCode2017.dir/main.cpp.o"
-  "CMakeFiles/HashCode2017.dir/Endpoint.cpp.o"
-  "CMakeFiles/HashCode2017.dir/CacheServer.cpp.o"
-  "CMakeFiles/HashCode2017.dir/Video.cpp.o"
-  "CMakeFiles/HashCode2017.dir/Importer.cpp.o"
-  "CMakeFiles/HashCode2017.dir/DataCenter.cpp.o"
-  "CMakeFiles/HashCode2017.dir/GeneticAlgorithm.cpp.o"
+  "CMakeFiles/HashCode2017.dir/Model/Endpoint.cpp.o"
+  "CMakeFiles/HashCode2017.dir/Model/CacheServer.cpp.o"
+  "CMakeFiles/HashCode2017.dir/Model/Video.cpp.o"
+  "CMakeFiles/HashCode2017.dir/Scanner/Importer.cpp.o"
+  "CMakeFiles/HashCode2017.dir/Model/DataCenter.cpp.o"
+  "CMakeFiles/HashCode2017.dir/GA/GeneticAlgorithm.cpp.o"
   "HashCode2017.pdb"
   "HashCode2017"
 )

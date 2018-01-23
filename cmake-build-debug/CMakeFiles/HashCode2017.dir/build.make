@@ -81,170 +81,170 @@ CMakeFiles/HashCode2017.dir/main.cpp.o.provides: CMakeFiles/HashCode2017.dir/mai
 CMakeFiles/HashCode2017.dir/main.cpp.o.provides.build: CMakeFiles/HashCode2017.dir/main.cpp.o
 
 
-CMakeFiles/HashCode2017.dir/Endpoint.cpp.o: CMakeFiles/HashCode2017.dir/flags.make
-CMakeFiles/HashCode2017.dir/Endpoint.cpp.o: ../Endpoint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/pedroneto/Desktop/HashCode2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/HashCode2017.dir/Endpoint.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HashCode2017.dir/Endpoint.cpp.o -c /Users/pedroneto/Desktop/HashCode2017/Endpoint.cpp
+CMakeFiles/HashCode2017.dir/Model/Endpoint.cpp.o: CMakeFiles/HashCode2017.dir/flags.make
+CMakeFiles/HashCode2017.dir/Model/Endpoint.cpp.o: ../Model/Endpoint.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/pedroneto/Desktop/HashCode2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/HashCode2017.dir/Model/Endpoint.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HashCode2017.dir/Model/Endpoint.cpp.o -c /Users/pedroneto/Desktop/HashCode2017/Model/Endpoint.cpp
 
-CMakeFiles/HashCode2017.dir/Endpoint.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HashCode2017.dir/Endpoint.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/pedroneto/Desktop/HashCode2017/Endpoint.cpp > CMakeFiles/HashCode2017.dir/Endpoint.cpp.i
+CMakeFiles/HashCode2017.dir/Model/Endpoint.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HashCode2017.dir/Model/Endpoint.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/pedroneto/Desktop/HashCode2017/Model/Endpoint.cpp > CMakeFiles/HashCode2017.dir/Model/Endpoint.cpp.i
 
-CMakeFiles/HashCode2017.dir/Endpoint.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HashCode2017.dir/Endpoint.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/pedroneto/Desktop/HashCode2017/Endpoint.cpp -o CMakeFiles/HashCode2017.dir/Endpoint.cpp.s
+CMakeFiles/HashCode2017.dir/Model/Endpoint.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HashCode2017.dir/Model/Endpoint.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/pedroneto/Desktop/HashCode2017/Model/Endpoint.cpp -o CMakeFiles/HashCode2017.dir/Model/Endpoint.cpp.s
 
-CMakeFiles/HashCode2017.dir/Endpoint.cpp.o.requires:
+CMakeFiles/HashCode2017.dir/Model/Endpoint.cpp.o.requires:
 
-.PHONY : CMakeFiles/HashCode2017.dir/Endpoint.cpp.o.requires
+.PHONY : CMakeFiles/HashCode2017.dir/Model/Endpoint.cpp.o.requires
 
-CMakeFiles/HashCode2017.dir/Endpoint.cpp.o.provides: CMakeFiles/HashCode2017.dir/Endpoint.cpp.o.requires
-	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Endpoint.cpp.o.provides.build
-.PHONY : CMakeFiles/HashCode2017.dir/Endpoint.cpp.o.provides
+CMakeFiles/HashCode2017.dir/Model/Endpoint.cpp.o.provides: CMakeFiles/HashCode2017.dir/Model/Endpoint.cpp.o.requires
+	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Model/Endpoint.cpp.o.provides.build
+.PHONY : CMakeFiles/HashCode2017.dir/Model/Endpoint.cpp.o.provides
 
-CMakeFiles/HashCode2017.dir/Endpoint.cpp.o.provides.build: CMakeFiles/HashCode2017.dir/Endpoint.cpp.o
-
-
-CMakeFiles/HashCode2017.dir/CacheServer.cpp.o: CMakeFiles/HashCode2017.dir/flags.make
-CMakeFiles/HashCode2017.dir/CacheServer.cpp.o: ../CacheServer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/pedroneto/Desktop/HashCode2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/HashCode2017.dir/CacheServer.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HashCode2017.dir/CacheServer.cpp.o -c /Users/pedroneto/Desktop/HashCode2017/CacheServer.cpp
-
-CMakeFiles/HashCode2017.dir/CacheServer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HashCode2017.dir/CacheServer.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/pedroneto/Desktop/HashCode2017/CacheServer.cpp > CMakeFiles/HashCode2017.dir/CacheServer.cpp.i
-
-CMakeFiles/HashCode2017.dir/CacheServer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HashCode2017.dir/CacheServer.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/pedroneto/Desktop/HashCode2017/CacheServer.cpp -o CMakeFiles/HashCode2017.dir/CacheServer.cpp.s
-
-CMakeFiles/HashCode2017.dir/CacheServer.cpp.o.requires:
-
-.PHONY : CMakeFiles/HashCode2017.dir/CacheServer.cpp.o.requires
-
-CMakeFiles/HashCode2017.dir/CacheServer.cpp.o.provides: CMakeFiles/HashCode2017.dir/CacheServer.cpp.o.requires
-	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/CacheServer.cpp.o.provides.build
-.PHONY : CMakeFiles/HashCode2017.dir/CacheServer.cpp.o.provides
-
-CMakeFiles/HashCode2017.dir/CacheServer.cpp.o.provides.build: CMakeFiles/HashCode2017.dir/CacheServer.cpp.o
+CMakeFiles/HashCode2017.dir/Model/Endpoint.cpp.o.provides.build: CMakeFiles/HashCode2017.dir/Model/Endpoint.cpp.o
 
 
-CMakeFiles/HashCode2017.dir/Video.cpp.o: CMakeFiles/HashCode2017.dir/flags.make
-CMakeFiles/HashCode2017.dir/Video.cpp.o: ../Video.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/pedroneto/Desktop/HashCode2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/HashCode2017.dir/Video.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HashCode2017.dir/Video.cpp.o -c /Users/pedroneto/Desktop/HashCode2017/Video.cpp
+CMakeFiles/HashCode2017.dir/Model/CacheServer.cpp.o: CMakeFiles/HashCode2017.dir/flags.make
+CMakeFiles/HashCode2017.dir/Model/CacheServer.cpp.o: ../Model/CacheServer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/pedroneto/Desktop/HashCode2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/HashCode2017.dir/Model/CacheServer.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HashCode2017.dir/Model/CacheServer.cpp.o -c /Users/pedroneto/Desktop/HashCode2017/Model/CacheServer.cpp
 
-CMakeFiles/HashCode2017.dir/Video.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HashCode2017.dir/Video.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/pedroneto/Desktop/HashCode2017/Video.cpp > CMakeFiles/HashCode2017.dir/Video.cpp.i
+CMakeFiles/HashCode2017.dir/Model/CacheServer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HashCode2017.dir/Model/CacheServer.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/pedroneto/Desktop/HashCode2017/Model/CacheServer.cpp > CMakeFiles/HashCode2017.dir/Model/CacheServer.cpp.i
 
-CMakeFiles/HashCode2017.dir/Video.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HashCode2017.dir/Video.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/pedroneto/Desktop/HashCode2017/Video.cpp -o CMakeFiles/HashCode2017.dir/Video.cpp.s
+CMakeFiles/HashCode2017.dir/Model/CacheServer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HashCode2017.dir/Model/CacheServer.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/pedroneto/Desktop/HashCode2017/Model/CacheServer.cpp -o CMakeFiles/HashCode2017.dir/Model/CacheServer.cpp.s
 
-CMakeFiles/HashCode2017.dir/Video.cpp.o.requires:
+CMakeFiles/HashCode2017.dir/Model/CacheServer.cpp.o.requires:
 
-.PHONY : CMakeFiles/HashCode2017.dir/Video.cpp.o.requires
+.PHONY : CMakeFiles/HashCode2017.dir/Model/CacheServer.cpp.o.requires
 
-CMakeFiles/HashCode2017.dir/Video.cpp.o.provides: CMakeFiles/HashCode2017.dir/Video.cpp.o.requires
-	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Video.cpp.o.provides.build
-.PHONY : CMakeFiles/HashCode2017.dir/Video.cpp.o.provides
+CMakeFiles/HashCode2017.dir/Model/CacheServer.cpp.o.provides: CMakeFiles/HashCode2017.dir/Model/CacheServer.cpp.o.requires
+	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Model/CacheServer.cpp.o.provides.build
+.PHONY : CMakeFiles/HashCode2017.dir/Model/CacheServer.cpp.o.provides
 
-CMakeFiles/HashCode2017.dir/Video.cpp.o.provides.build: CMakeFiles/HashCode2017.dir/Video.cpp.o
-
-
-CMakeFiles/HashCode2017.dir/Importer.cpp.o: CMakeFiles/HashCode2017.dir/flags.make
-CMakeFiles/HashCode2017.dir/Importer.cpp.o: ../Importer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/pedroneto/Desktop/HashCode2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/HashCode2017.dir/Importer.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HashCode2017.dir/Importer.cpp.o -c /Users/pedroneto/Desktop/HashCode2017/Importer.cpp
-
-CMakeFiles/HashCode2017.dir/Importer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HashCode2017.dir/Importer.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/pedroneto/Desktop/HashCode2017/Importer.cpp > CMakeFiles/HashCode2017.dir/Importer.cpp.i
-
-CMakeFiles/HashCode2017.dir/Importer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HashCode2017.dir/Importer.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/pedroneto/Desktop/HashCode2017/Importer.cpp -o CMakeFiles/HashCode2017.dir/Importer.cpp.s
-
-CMakeFiles/HashCode2017.dir/Importer.cpp.o.requires:
-
-.PHONY : CMakeFiles/HashCode2017.dir/Importer.cpp.o.requires
-
-CMakeFiles/HashCode2017.dir/Importer.cpp.o.provides: CMakeFiles/HashCode2017.dir/Importer.cpp.o.requires
-	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Importer.cpp.o.provides.build
-.PHONY : CMakeFiles/HashCode2017.dir/Importer.cpp.o.provides
-
-CMakeFiles/HashCode2017.dir/Importer.cpp.o.provides.build: CMakeFiles/HashCode2017.dir/Importer.cpp.o
+CMakeFiles/HashCode2017.dir/Model/CacheServer.cpp.o.provides.build: CMakeFiles/HashCode2017.dir/Model/CacheServer.cpp.o
 
 
-CMakeFiles/HashCode2017.dir/DataCenter.cpp.o: CMakeFiles/HashCode2017.dir/flags.make
-CMakeFiles/HashCode2017.dir/DataCenter.cpp.o: ../DataCenter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/pedroneto/Desktop/HashCode2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/HashCode2017.dir/DataCenter.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HashCode2017.dir/DataCenter.cpp.o -c /Users/pedroneto/Desktop/HashCode2017/DataCenter.cpp
+CMakeFiles/HashCode2017.dir/Model/Video.cpp.o: CMakeFiles/HashCode2017.dir/flags.make
+CMakeFiles/HashCode2017.dir/Model/Video.cpp.o: ../Model/Video.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/pedroneto/Desktop/HashCode2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/HashCode2017.dir/Model/Video.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HashCode2017.dir/Model/Video.cpp.o -c /Users/pedroneto/Desktop/HashCode2017/Model/Video.cpp
 
-CMakeFiles/HashCode2017.dir/DataCenter.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HashCode2017.dir/DataCenter.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/pedroneto/Desktop/HashCode2017/DataCenter.cpp > CMakeFiles/HashCode2017.dir/DataCenter.cpp.i
+CMakeFiles/HashCode2017.dir/Model/Video.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HashCode2017.dir/Model/Video.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/pedroneto/Desktop/HashCode2017/Model/Video.cpp > CMakeFiles/HashCode2017.dir/Model/Video.cpp.i
 
-CMakeFiles/HashCode2017.dir/DataCenter.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HashCode2017.dir/DataCenter.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/pedroneto/Desktop/HashCode2017/DataCenter.cpp -o CMakeFiles/HashCode2017.dir/DataCenter.cpp.s
+CMakeFiles/HashCode2017.dir/Model/Video.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HashCode2017.dir/Model/Video.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/pedroneto/Desktop/HashCode2017/Model/Video.cpp -o CMakeFiles/HashCode2017.dir/Model/Video.cpp.s
 
-CMakeFiles/HashCode2017.dir/DataCenter.cpp.o.requires:
+CMakeFiles/HashCode2017.dir/Model/Video.cpp.o.requires:
 
-.PHONY : CMakeFiles/HashCode2017.dir/DataCenter.cpp.o.requires
+.PHONY : CMakeFiles/HashCode2017.dir/Model/Video.cpp.o.requires
 
-CMakeFiles/HashCode2017.dir/DataCenter.cpp.o.provides: CMakeFiles/HashCode2017.dir/DataCenter.cpp.o.requires
-	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/DataCenter.cpp.o.provides.build
-.PHONY : CMakeFiles/HashCode2017.dir/DataCenter.cpp.o.provides
+CMakeFiles/HashCode2017.dir/Model/Video.cpp.o.provides: CMakeFiles/HashCode2017.dir/Model/Video.cpp.o.requires
+	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Model/Video.cpp.o.provides.build
+.PHONY : CMakeFiles/HashCode2017.dir/Model/Video.cpp.o.provides
 
-CMakeFiles/HashCode2017.dir/DataCenter.cpp.o.provides.build: CMakeFiles/HashCode2017.dir/DataCenter.cpp.o
+CMakeFiles/HashCode2017.dir/Model/Video.cpp.o.provides.build: CMakeFiles/HashCode2017.dir/Model/Video.cpp.o
 
 
-CMakeFiles/HashCode2017.dir/GeneticAlgorithm.cpp.o: CMakeFiles/HashCode2017.dir/flags.make
-CMakeFiles/HashCode2017.dir/GeneticAlgorithm.cpp.o: ../GeneticAlgorithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/pedroneto/Desktop/HashCode2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/HashCode2017.dir/GeneticAlgorithm.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HashCode2017.dir/GeneticAlgorithm.cpp.o -c /Users/pedroneto/Desktop/HashCode2017/GeneticAlgorithm.cpp
+CMakeFiles/HashCode2017.dir/Scanner/Importer.cpp.o: CMakeFiles/HashCode2017.dir/flags.make
+CMakeFiles/HashCode2017.dir/Scanner/Importer.cpp.o: ../Scanner/Importer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/pedroneto/Desktop/HashCode2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/HashCode2017.dir/Scanner/Importer.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HashCode2017.dir/Scanner/Importer.cpp.o -c /Users/pedroneto/Desktop/HashCode2017/Scanner/Importer.cpp
 
-CMakeFiles/HashCode2017.dir/GeneticAlgorithm.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HashCode2017.dir/GeneticAlgorithm.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/pedroneto/Desktop/HashCode2017/GeneticAlgorithm.cpp > CMakeFiles/HashCode2017.dir/GeneticAlgorithm.cpp.i
+CMakeFiles/HashCode2017.dir/Scanner/Importer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HashCode2017.dir/Scanner/Importer.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/pedroneto/Desktop/HashCode2017/Scanner/Importer.cpp > CMakeFiles/HashCode2017.dir/Scanner/Importer.cpp.i
 
-CMakeFiles/HashCode2017.dir/GeneticAlgorithm.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HashCode2017.dir/GeneticAlgorithm.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/pedroneto/Desktop/HashCode2017/GeneticAlgorithm.cpp -o CMakeFiles/HashCode2017.dir/GeneticAlgorithm.cpp.s
+CMakeFiles/HashCode2017.dir/Scanner/Importer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HashCode2017.dir/Scanner/Importer.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/pedroneto/Desktop/HashCode2017/Scanner/Importer.cpp -o CMakeFiles/HashCode2017.dir/Scanner/Importer.cpp.s
 
-CMakeFiles/HashCode2017.dir/GeneticAlgorithm.cpp.o.requires:
+CMakeFiles/HashCode2017.dir/Scanner/Importer.cpp.o.requires:
 
-.PHONY : CMakeFiles/HashCode2017.dir/GeneticAlgorithm.cpp.o.requires
+.PHONY : CMakeFiles/HashCode2017.dir/Scanner/Importer.cpp.o.requires
 
-CMakeFiles/HashCode2017.dir/GeneticAlgorithm.cpp.o.provides: CMakeFiles/HashCode2017.dir/GeneticAlgorithm.cpp.o.requires
-	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/GeneticAlgorithm.cpp.o.provides.build
-.PHONY : CMakeFiles/HashCode2017.dir/GeneticAlgorithm.cpp.o.provides
+CMakeFiles/HashCode2017.dir/Scanner/Importer.cpp.o.provides: CMakeFiles/HashCode2017.dir/Scanner/Importer.cpp.o.requires
+	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Scanner/Importer.cpp.o.provides.build
+.PHONY : CMakeFiles/HashCode2017.dir/Scanner/Importer.cpp.o.provides
 
-CMakeFiles/HashCode2017.dir/GeneticAlgorithm.cpp.o.provides.build: CMakeFiles/HashCode2017.dir/GeneticAlgorithm.cpp.o
+CMakeFiles/HashCode2017.dir/Scanner/Importer.cpp.o.provides.build: CMakeFiles/HashCode2017.dir/Scanner/Importer.cpp.o
+
+
+CMakeFiles/HashCode2017.dir/Model/DataCenter.cpp.o: CMakeFiles/HashCode2017.dir/flags.make
+CMakeFiles/HashCode2017.dir/Model/DataCenter.cpp.o: ../Model/DataCenter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/pedroneto/Desktop/HashCode2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/HashCode2017.dir/Model/DataCenter.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HashCode2017.dir/Model/DataCenter.cpp.o -c /Users/pedroneto/Desktop/HashCode2017/Model/DataCenter.cpp
+
+CMakeFiles/HashCode2017.dir/Model/DataCenter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HashCode2017.dir/Model/DataCenter.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/pedroneto/Desktop/HashCode2017/Model/DataCenter.cpp > CMakeFiles/HashCode2017.dir/Model/DataCenter.cpp.i
+
+CMakeFiles/HashCode2017.dir/Model/DataCenter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HashCode2017.dir/Model/DataCenter.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/pedroneto/Desktop/HashCode2017/Model/DataCenter.cpp -o CMakeFiles/HashCode2017.dir/Model/DataCenter.cpp.s
+
+CMakeFiles/HashCode2017.dir/Model/DataCenter.cpp.o.requires:
+
+.PHONY : CMakeFiles/HashCode2017.dir/Model/DataCenter.cpp.o.requires
+
+CMakeFiles/HashCode2017.dir/Model/DataCenter.cpp.o.provides: CMakeFiles/HashCode2017.dir/Model/DataCenter.cpp.o.requires
+	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Model/DataCenter.cpp.o.provides.build
+.PHONY : CMakeFiles/HashCode2017.dir/Model/DataCenter.cpp.o.provides
+
+CMakeFiles/HashCode2017.dir/Model/DataCenter.cpp.o.provides.build: CMakeFiles/HashCode2017.dir/Model/DataCenter.cpp.o
+
+
+CMakeFiles/HashCode2017.dir/GA/GeneticAlgorithm.cpp.o: CMakeFiles/HashCode2017.dir/flags.make
+CMakeFiles/HashCode2017.dir/GA/GeneticAlgorithm.cpp.o: ../GA/GeneticAlgorithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/pedroneto/Desktop/HashCode2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/HashCode2017.dir/GA/GeneticAlgorithm.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HashCode2017.dir/GA/GeneticAlgorithm.cpp.o -c /Users/pedroneto/Desktop/HashCode2017/GA/GeneticAlgorithm.cpp
+
+CMakeFiles/HashCode2017.dir/GA/GeneticAlgorithm.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HashCode2017.dir/GA/GeneticAlgorithm.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/pedroneto/Desktop/HashCode2017/GA/GeneticAlgorithm.cpp > CMakeFiles/HashCode2017.dir/GA/GeneticAlgorithm.cpp.i
+
+CMakeFiles/HashCode2017.dir/GA/GeneticAlgorithm.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HashCode2017.dir/GA/GeneticAlgorithm.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/pedroneto/Desktop/HashCode2017/GA/GeneticAlgorithm.cpp -o CMakeFiles/HashCode2017.dir/GA/GeneticAlgorithm.cpp.s
+
+CMakeFiles/HashCode2017.dir/GA/GeneticAlgorithm.cpp.o.requires:
+
+.PHONY : CMakeFiles/HashCode2017.dir/GA/GeneticAlgorithm.cpp.o.requires
+
+CMakeFiles/HashCode2017.dir/GA/GeneticAlgorithm.cpp.o.provides: CMakeFiles/HashCode2017.dir/GA/GeneticAlgorithm.cpp.o.requires
+	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/GA/GeneticAlgorithm.cpp.o.provides.build
+.PHONY : CMakeFiles/HashCode2017.dir/GA/GeneticAlgorithm.cpp.o.provides
+
+CMakeFiles/HashCode2017.dir/GA/GeneticAlgorithm.cpp.o.provides.build: CMakeFiles/HashCode2017.dir/GA/GeneticAlgorithm.cpp.o
 
 
 # Object files for target HashCode2017
 HashCode2017_OBJECTS = \
 "CMakeFiles/HashCode2017.dir/main.cpp.o" \
-"CMakeFiles/HashCode2017.dir/Endpoint.cpp.o" \
-"CMakeFiles/HashCode2017.dir/CacheServer.cpp.o" \
-"CMakeFiles/HashCode2017.dir/Video.cpp.o" \
-"CMakeFiles/HashCode2017.dir/Importer.cpp.o" \
-"CMakeFiles/HashCode2017.dir/DataCenter.cpp.o" \
-"CMakeFiles/HashCode2017.dir/GeneticAlgorithm.cpp.o"
+"CMakeFiles/HashCode2017.dir/Model/Endpoint.cpp.o" \
+"CMakeFiles/HashCode2017.dir/Model/CacheServer.cpp.o" \
+"CMakeFiles/HashCode2017.dir/Model/Video.cpp.o" \
+"CMakeFiles/HashCode2017.dir/Scanner/Importer.cpp.o" \
+"CMakeFiles/HashCode2017.dir/Model/DataCenter.cpp.o" \
+"CMakeFiles/HashCode2017.dir/GA/GeneticAlgorithm.cpp.o"
 
 # External object files for target HashCode2017
 HashCode2017_EXTERNAL_OBJECTS =
 
 HashCode2017: CMakeFiles/HashCode2017.dir/main.cpp.o
-HashCode2017: CMakeFiles/HashCode2017.dir/Endpoint.cpp.o
-HashCode2017: CMakeFiles/HashCode2017.dir/CacheServer.cpp.o
-HashCode2017: CMakeFiles/HashCode2017.dir/Video.cpp.o
-HashCode2017: CMakeFiles/HashCode2017.dir/Importer.cpp.o
-HashCode2017: CMakeFiles/HashCode2017.dir/DataCenter.cpp.o
-HashCode2017: CMakeFiles/HashCode2017.dir/GeneticAlgorithm.cpp.o
+HashCode2017: CMakeFiles/HashCode2017.dir/Model/Endpoint.cpp.o
+HashCode2017: CMakeFiles/HashCode2017.dir/Model/CacheServer.cpp.o
+HashCode2017: CMakeFiles/HashCode2017.dir/Model/Video.cpp.o
+HashCode2017: CMakeFiles/HashCode2017.dir/Scanner/Importer.cpp.o
+HashCode2017: CMakeFiles/HashCode2017.dir/Model/DataCenter.cpp.o
+HashCode2017: CMakeFiles/HashCode2017.dir/GA/GeneticAlgorithm.cpp.o
 HashCode2017: CMakeFiles/HashCode2017.dir/build.make
 HashCode2017: CMakeFiles/HashCode2017.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/pedroneto/Desktop/HashCode2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable HashCode2017"
@@ -256,12 +256,12 @@ CMakeFiles/HashCode2017.dir/build: HashCode2017
 .PHONY : CMakeFiles/HashCode2017.dir/build
 
 CMakeFiles/HashCode2017.dir/requires: CMakeFiles/HashCode2017.dir/main.cpp.o.requires
-CMakeFiles/HashCode2017.dir/requires: CMakeFiles/HashCode2017.dir/Endpoint.cpp.o.requires
-CMakeFiles/HashCode2017.dir/requires: CMakeFiles/HashCode2017.dir/CacheServer.cpp.o.requires
-CMakeFiles/HashCode2017.dir/requires: CMakeFiles/HashCode2017.dir/Video.cpp.o.requires
-CMakeFiles/HashCode2017.dir/requires: CMakeFiles/HashCode2017.dir/Importer.cpp.o.requires
-CMakeFiles/HashCode2017.dir/requires: CMakeFiles/HashCode2017.dir/DataCenter.cpp.o.requires
-CMakeFiles/HashCode2017.dir/requires: CMakeFiles/HashCode2017.dir/GeneticAlgorithm.cpp.o.requires
+CMakeFiles/HashCode2017.dir/requires: CMakeFiles/HashCode2017.dir/Model/Endpoint.cpp.o.requires
+CMakeFiles/HashCode2017.dir/requires: CMakeFiles/HashCode2017.dir/Model/CacheServer.cpp.o.requires
+CMakeFiles/HashCode2017.dir/requires: CMakeFiles/HashCode2017.dir/Model/Video.cpp.o.requires
+CMakeFiles/HashCode2017.dir/requires: CMakeFiles/HashCode2017.dir/Scanner/Importer.cpp.o.requires
+CMakeFiles/HashCode2017.dir/requires: CMakeFiles/HashCode2017.dir/Model/DataCenter.cpp.o.requires
+CMakeFiles/HashCode2017.dir/requires: CMakeFiles/HashCode2017.dir/GA/GeneticAlgorithm.cpp.o.requires
 
 .PHONY : CMakeFiles/HashCode2017.dir/requires
 

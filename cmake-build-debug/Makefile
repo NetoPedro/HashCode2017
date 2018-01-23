@@ -123,167 +123,167 @@ HashCode2017/fast:
 	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/build
 .PHONY : HashCode2017/fast
 
-CacheServer.o: CacheServer.cpp.o
+GA/GeneticAlgorithm.o: GA/GeneticAlgorithm.cpp.o
 
-.PHONY : CacheServer.o
-
-# target to build an object file
-CacheServer.cpp.o:
-	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/CacheServer.cpp.o
-.PHONY : CacheServer.cpp.o
-
-CacheServer.i: CacheServer.cpp.i
-
-.PHONY : CacheServer.i
-
-# target to preprocess a source file
-CacheServer.cpp.i:
-	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/CacheServer.cpp.i
-.PHONY : CacheServer.cpp.i
-
-CacheServer.s: CacheServer.cpp.s
-
-.PHONY : CacheServer.s
-
-# target to generate assembly for a file
-CacheServer.cpp.s:
-	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/CacheServer.cpp.s
-.PHONY : CacheServer.cpp.s
-
-DataCenter.o: DataCenter.cpp.o
-
-.PHONY : DataCenter.o
+.PHONY : GA/GeneticAlgorithm.o
 
 # target to build an object file
-DataCenter.cpp.o:
-	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/DataCenter.cpp.o
-.PHONY : DataCenter.cpp.o
+GA/GeneticAlgorithm.cpp.o:
+	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/GA/GeneticAlgorithm.cpp.o
+.PHONY : GA/GeneticAlgorithm.cpp.o
 
-DataCenter.i: DataCenter.cpp.i
+GA/GeneticAlgorithm.i: GA/GeneticAlgorithm.cpp.i
 
-.PHONY : DataCenter.i
+.PHONY : GA/GeneticAlgorithm.i
 
 # target to preprocess a source file
-DataCenter.cpp.i:
-	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/DataCenter.cpp.i
-.PHONY : DataCenter.cpp.i
+GA/GeneticAlgorithm.cpp.i:
+	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/GA/GeneticAlgorithm.cpp.i
+.PHONY : GA/GeneticAlgorithm.cpp.i
 
-DataCenter.s: DataCenter.cpp.s
+GA/GeneticAlgorithm.s: GA/GeneticAlgorithm.cpp.s
 
-.PHONY : DataCenter.s
+.PHONY : GA/GeneticAlgorithm.s
 
 # target to generate assembly for a file
-DataCenter.cpp.s:
-	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/DataCenter.cpp.s
-.PHONY : DataCenter.cpp.s
+GA/GeneticAlgorithm.cpp.s:
+	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/GA/GeneticAlgorithm.cpp.s
+.PHONY : GA/GeneticAlgorithm.cpp.s
 
-Endpoint.o: Endpoint.cpp.o
+Model/CacheServer.o: Model/CacheServer.cpp.o
 
-.PHONY : Endpoint.o
+.PHONY : Model/CacheServer.o
 
 # target to build an object file
-Endpoint.cpp.o:
-	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Endpoint.cpp.o
-.PHONY : Endpoint.cpp.o
+Model/CacheServer.cpp.o:
+	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Model/CacheServer.cpp.o
+.PHONY : Model/CacheServer.cpp.o
 
-Endpoint.i: Endpoint.cpp.i
+Model/CacheServer.i: Model/CacheServer.cpp.i
 
-.PHONY : Endpoint.i
+.PHONY : Model/CacheServer.i
 
 # target to preprocess a source file
-Endpoint.cpp.i:
-	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Endpoint.cpp.i
-.PHONY : Endpoint.cpp.i
+Model/CacheServer.cpp.i:
+	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Model/CacheServer.cpp.i
+.PHONY : Model/CacheServer.cpp.i
 
-Endpoint.s: Endpoint.cpp.s
+Model/CacheServer.s: Model/CacheServer.cpp.s
 
-.PHONY : Endpoint.s
+.PHONY : Model/CacheServer.s
 
 # target to generate assembly for a file
-Endpoint.cpp.s:
-	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Endpoint.cpp.s
-.PHONY : Endpoint.cpp.s
+Model/CacheServer.cpp.s:
+	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Model/CacheServer.cpp.s
+.PHONY : Model/CacheServer.cpp.s
 
-GeneticAlgorithm.o: GeneticAlgorithm.cpp.o
+Model/DataCenter.o: Model/DataCenter.cpp.o
 
-.PHONY : GeneticAlgorithm.o
+.PHONY : Model/DataCenter.o
 
 # target to build an object file
-GeneticAlgorithm.cpp.o:
-	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/GeneticAlgorithm.cpp.o
-.PHONY : GeneticAlgorithm.cpp.o
+Model/DataCenter.cpp.o:
+	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Model/DataCenter.cpp.o
+.PHONY : Model/DataCenter.cpp.o
 
-GeneticAlgorithm.i: GeneticAlgorithm.cpp.i
+Model/DataCenter.i: Model/DataCenter.cpp.i
 
-.PHONY : GeneticAlgorithm.i
+.PHONY : Model/DataCenter.i
 
 # target to preprocess a source file
-GeneticAlgorithm.cpp.i:
-	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/GeneticAlgorithm.cpp.i
-.PHONY : GeneticAlgorithm.cpp.i
+Model/DataCenter.cpp.i:
+	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Model/DataCenter.cpp.i
+.PHONY : Model/DataCenter.cpp.i
 
-GeneticAlgorithm.s: GeneticAlgorithm.cpp.s
+Model/DataCenter.s: Model/DataCenter.cpp.s
 
-.PHONY : GeneticAlgorithm.s
+.PHONY : Model/DataCenter.s
 
 # target to generate assembly for a file
-GeneticAlgorithm.cpp.s:
-	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/GeneticAlgorithm.cpp.s
-.PHONY : GeneticAlgorithm.cpp.s
+Model/DataCenter.cpp.s:
+	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Model/DataCenter.cpp.s
+.PHONY : Model/DataCenter.cpp.s
 
-Importer.o: Importer.cpp.o
+Model/Endpoint.o: Model/Endpoint.cpp.o
 
-.PHONY : Importer.o
+.PHONY : Model/Endpoint.o
 
 # target to build an object file
-Importer.cpp.o:
-	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Importer.cpp.o
-.PHONY : Importer.cpp.o
+Model/Endpoint.cpp.o:
+	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Model/Endpoint.cpp.o
+.PHONY : Model/Endpoint.cpp.o
 
-Importer.i: Importer.cpp.i
+Model/Endpoint.i: Model/Endpoint.cpp.i
 
-.PHONY : Importer.i
+.PHONY : Model/Endpoint.i
 
 # target to preprocess a source file
-Importer.cpp.i:
-	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Importer.cpp.i
-.PHONY : Importer.cpp.i
+Model/Endpoint.cpp.i:
+	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Model/Endpoint.cpp.i
+.PHONY : Model/Endpoint.cpp.i
 
-Importer.s: Importer.cpp.s
+Model/Endpoint.s: Model/Endpoint.cpp.s
 
-.PHONY : Importer.s
+.PHONY : Model/Endpoint.s
 
 # target to generate assembly for a file
-Importer.cpp.s:
-	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Importer.cpp.s
-.PHONY : Importer.cpp.s
+Model/Endpoint.cpp.s:
+	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Model/Endpoint.cpp.s
+.PHONY : Model/Endpoint.cpp.s
 
-Video.o: Video.cpp.o
+Model/Video.o: Model/Video.cpp.o
 
-.PHONY : Video.o
+.PHONY : Model/Video.o
 
 # target to build an object file
-Video.cpp.o:
-	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Video.cpp.o
-.PHONY : Video.cpp.o
+Model/Video.cpp.o:
+	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Model/Video.cpp.o
+.PHONY : Model/Video.cpp.o
 
-Video.i: Video.cpp.i
+Model/Video.i: Model/Video.cpp.i
 
-.PHONY : Video.i
+.PHONY : Model/Video.i
 
 # target to preprocess a source file
-Video.cpp.i:
-	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Video.cpp.i
-.PHONY : Video.cpp.i
+Model/Video.cpp.i:
+	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Model/Video.cpp.i
+.PHONY : Model/Video.cpp.i
 
-Video.s: Video.cpp.s
+Model/Video.s: Model/Video.cpp.s
 
-.PHONY : Video.s
+.PHONY : Model/Video.s
 
 # target to generate assembly for a file
-Video.cpp.s:
-	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Video.cpp.s
-.PHONY : Video.cpp.s
+Model/Video.cpp.s:
+	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Model/Video.cpp.s
+.PHONY : Model/Video.cpp.s
+
+Scanner/Importer.o: Scanner/Importer.cpp.o
+
+.PHONY : Scanner/Importer.o
+
+# target to build an object file
+Scanner/Importer.cpp.o:
+	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Scanner/Importer.cpp.o
+.PHONY : Scanner/Importer.cpp.o
+
+Scanner/Importer.i: Scanner/Importer.cpp.i
+
+.PHONY : Scanner/Importer.i
+
+# target to preprocess a source file
+Scanner/Importer.cpp.i:
+	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Scanner/Importer.cpp.i
+.PHONY : Scanner/Importer.cpp.i
+
+Scanner/Importer.s: Scanner/Importer.cpp.s
+
+.PHONY : Scanner/Importer.s
+
+# target to generate assembly for a file
+Scanner/Importer.cpp.s:
+	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Scanner/Importer.cpp.s
+.PHONY : Scanner/Importer.cpp.s
 
 main.o: main.cpp.o
 
@@ -321,24 +321,24 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... HashCode2017"
-	@echo "... CacheServer.o"
-	@echo "... CacheServer.i"
-	@echo "... CacheServer.s"
-	@echo "... DataCenter.o"
-	@echo "... DataCenter.i"
-	@echo "... DataCenter.s"
-	@echo "... Endpoint.o"
-	@echo "... Endpoint.i"
-	@echo "... Endpoint.s"
-	@echo "... GeneticAlgorithm.o"
-	@echo "... GeneticAlgorithm.i"
-	@echo "... GeneticAlgorithm.s"
-	@echo "... Importer.o"
-	@echo "... Importer.i"
-	@echo "... Importer.s"
-	@echo "... Video.o"
-	@echo "... Video.i"
-	@echo "... Video.s"
+	@echo "... GA/GeneticAlgorithm.o"
+	@echo "... GA/GeneticAlgorithm.i"
+	@echo "... GA/GeneticAlgorithm.s"
+	@echo "... Model/CacheServer.o"
+	@echo "... Model/CacheServer.i"
+	@echo "... Model/CacheServer.s"
+	@echo "... Model/DataCenter.o"
+	@echo "... Model/DataCenter.i"
+	@echo "... Model/DataCenter.s"
+	@echo "... Model/Endpoint.o"
+	@echo "... Model/Endpoint.i"
+	@echo "... Model/Endpoint.s"
+	@echo "... Model/Video.o"
+	@echo "... Model/Video.i"
+	@echo "... Model/Video.s"
+	@echo "... Scanner/Importer.o"
+	@echo "... Scanner/Importer.i"
+	@echo "... Scanner/Importer.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
