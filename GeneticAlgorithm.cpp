@@ -6,6 +6,13 @@
 
 #define POPULATION_SIZE 10
 #define MUTATION_TAX 0.15
+
+/**
+ * Function to start the Genetic Algorithm
+ * @param generations Number of generations until stop
+ * @param dataCenter DataCenter with the information to run the geneticAlgorithm
+ * @param geneSize Size of the Chromosome
+ */
 void GeneticAlgorithm::init(int generations, DataCenter dataCenter,int geneSize) {
     this->dataCenter = dataCenter ;
     std::list<int> bestSolution ;
@@ -17,7 +24,11 @@ void GeneticAlgorithm::init(int generations, DataCenter dataCenter,int geneSize)
         selection();
     }
 }
-
+/**
+ * Function to apply a crossover technique in the population
+ * Uses a random mask to cross parents
+ * @param geneSize Size of the chromosome
+ */
 void GeneticAlgorithm::crossover(int geneSize) {
     std::list<int> newMembers;
     std::string mask= "" ;
@@ -35,6 +46,11 @@ void GeneticAlgorithm::crossover(int geneSize) {
 
 }
 //Tournament selection
+/**
+ * Function to apply a selection technique in the population
+ * As result the population size will be cut to half of the original size
+ * Uses Tournament Selection
+ */
 void GeneticAlgorithm::selection() {
     for (int j = 0; j < POPULATION_SIZE ; j+=1) {
            auto it1 = std::next(this->population.begin(), j);
@@ -50,7 +66,10 @@ void GeneticAlgorithm::selection() {
 
     }
 }
-
+/**
+ * Function to apply mutation in the population
+ * Uses random values and check if they are greater than the Mutation Tax defined
+ */
 void GeneticAlgorithm::mutation() {
     for (std::list<std::string> chromosome  : this->population) {
         int rand = std::rand();
@@ -64,13 +83,22 @@ void GeneticAlgorithm::mutation() {
 
     }
 }
-
+/**
+ * Function to calculate the fitness of a Chromosome
+ * @param chromosome Chromosome to be analysed
+ * @return Returns the fitness value
+ */
 float GeneticAlgorithm::fitness(std::list<std::string> chromosome) {
     for (std::string gene : chromosome) {
 
     }
 }
-
+/**
+ * Function to generate the initial population
+ * @param populationElementsCount Population size
+ * @param geneSize Size of the gene
+ * @return returns the best element of the population
+ */
 float GeneticAlgorithm::generateInitialPopulation(int populationElementsCount, int geneSize) {
     return 0 ;
 }
