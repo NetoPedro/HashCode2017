@@ -36,10 +36,17 @@ void GeneticAlgorithm::crossover(int geneSize) {
 }
 //Tournament selection
 void GeneticAlgorithm::selection() {
-    for (int j = 0; j < POPULATION_SIZE ; j+=2) {
-        /*   auto it1 = std::next(this->population.begin(), j);
-           std::list<int> parent1 = ( std::list<int>) *it1;
-           auto it2 = std::next(this->population.begin(), j+1);*/
+    for (int j = 0; j < POPULATION_SIZE ; j+=1) {
+           auto it1 = std::next(this->population.begin(), j);
+           std::list<std::string> parent1 =  *it1;
+           auto it2 = std::next(this->population.begin(), j+1);
+            std::list<std::string> parent2 = *it2 ;
+            if(fitness(parent1) > fitness(parent2)){
+                this->population.remove(*it2);
+            }
+            else{
+                this->population.remove(*it1);
+            }
 
     }
 }
@@ -52,7 +59,7 @@ void GeneticAlgorithm::mutation() {
             int randomGene = std::rand() * (chromosome.size()-1);
             std::list<std::string>::iterator iterator = chromosome.begin();
             std::advance(iterator,randomGene);
-            *iterator = randomGeneValue ; 
+            *iterator = randomGeneValue ;
         }
 
     }
