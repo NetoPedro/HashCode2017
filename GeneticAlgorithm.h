@@ -14,6 +14,7 @@
 class GeneticAlgorithm {
 public:
     std::list<std::list<std::string>> population;
+    DataCenter dataCenter;
     void init(int generations,DataCenter dataCenter,int geneSize);
 private:
     float generateInitialPopulation(int populationElementsCount,int geneSize);

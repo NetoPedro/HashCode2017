@@ -7,6 +7,7 @@
 #define POPULATION_SIZE 10
 #define MUTATION_TAX 0.15
 void GeneticAlgorithm::init(int generations, DataCenter dataCenter,int geneSize) {
+    this->dataCenter = dataCenter ;
     std::list<int> bestSolution ;
     srand (time(NULL));
     this->generateInitialPopulation(POPULATION_SIZE,geneSize);
@@ -47,14 +48,20 @@ void GeneticAlgorithm::mutation() {
     for (std::list<std::string> chromosome  : this->population) {
         int rand = std::rand();
         if (rand <= MUTATION_TAX){
-            //Apply mutation
+            int randomGeneValue = std::rand() * (dataCenter.videos.size()-1);
+            int randomGene = std::rand() * (chromosome.size()-1);
+            std::list<std::string>::iterator iterator = chromosome.begin();
+            std::advance(iterator,randomGene);
+            *iterator = randomGeneValue ; 
         }
 
     }
 }
 
 float GeneticAlgorithm::fitness(std::list<std::string> chromosome) {
-    return 0 ;
+    for (std::string gene : chromosome) {
+
+    }
 }
 
 float GeneticAlgorithm::generateInitialPopulation(int populationElementsCount, int geneSize) {
