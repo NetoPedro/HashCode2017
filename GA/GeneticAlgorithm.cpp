@@ -13,6 +13,7 @@
  * @param dataCenter DataCenter with the information to run the geneticAlgorithm
  * @param geneSize Size of the Chromosome
  */
+
 void GeneticAlgorithm::init(int generations, DataCenter dataCenter,int geneSize) {
     this->dataCenter = dataCenter ;
     std::list<int> bestSolution ;
@@ -37,13 +38,48 @@ void GeneticAlgorithm::crossover(int geneSize) {
         int rand = std::rand() % 2 ;
         mask += rand;
     }
-
+    std::list<std::list<std::string>> *descendants = new std::list<std::list<std::string>>();
+    std::list<std::list<std::string>>::iterator iterator = descendants->begin();
     for (int j = 0; j < POPULATION_SIZE ; j+=2) {
-     /*   auto it1 = std::next(this->population.begin(), j);
-        std::list<int> parent1 = ( std::list<int>) *it1;
-        auto it2 = std::next(this->population.begin(), j+1);*/
-    }
+        auto it1 = std::next(this->population.begin(), j);
+        std::list<std::string> parent1 = ( std::list<std::string>) *it1;
+        auto it2 = std::next(this->population.begin(), j+1);
+        std::list<std::string> parent2 = ( std::list<std::string>) *it2;
+        std::list<std::string>::iterator parent1Iterator = parent1.begin();
+        std::list<std::string>::iterator parent2Iterator = parent2.begin();
 
+        std::list<std::string> *descendant1 = new std::list<std::string>() ;
+        std::list<std::string>::iterator descandant1Iterator = descendant1->begin();
+        for(char gene : mask){
+            if(gene == 0){
+                descendant1->insert(descandant1Iterator,*parent1Iterator);
+            }
+            else{
+                descendant1->insert(descandant1Iterator,*parent2Iterator);
+            }
+            parent1Iterator++;
+            parent2Iterator++;
+            descandant1Iterator++;
+        }
+        parent1Iterator = parent1.begin();
+        parent2Iterator = parent2.begin();
+        std::list<std::string> *descendant2 = new std::list<std::string>() ;
+        std::list<std::string>::iterator descandant2Iterator = descendant2->begin();
+        for(char gene : mask){
+            if(gene == 0){
+                descendant2->insert(descandant2Iterator,*parent2Iterator);
+            }
+            else{
+                descendant2->insert(descandant2Iterator,*parent1Iterator);
+            }
+            parent1Iterator++;
+            parent2Iterator++;
+            descandant2Iterator++;
+        }
+        descendants->insert(iterator,*descendant1);
+        descendants->insert(iterator,*descendant2);
+    }
+    this->population.insert(this->population.end(),descendants->begin(),descendants->end());
 }
 //Tournament selection
 /**
@@ -53,16 +89,16 @@ void GeneticAlgorithm::crossover(int geneSize) {
  */
 void GeneticAlgorithm::selection() {
     for (int j = 0; j < POPULATION_SIZE ; j+=1) {
-           auto it1 = std::next(this->population.begin(), j);
-           std::list<std::string> parent1 =  *it1;
-           auto it2 = std::next(this->population.begin(), j+1);
-            std::list<std::string> parent2 = *it2 ;
-            if(fitness(parent1) > fitness(parent2)){
-                this->population.remove(*it2);
-            }
-            else{
-                this->population.remove(*it1);
-            }
+        auto it1 = std::next(this->population.begin(), j);
+        std::list<std::string> parent1 =  *it1;
+        auto it2 = std::next(this->population.begin(), j+1);
+        std::list<std::string> parent2 = *it2 ;
+        if(fitness(parent1) > fitness(parent2)){
+            this->population.remove(*it2);
+        }
+        else{
+            this->population.remove(*it1);
+        }
 
     }
 }
@@ -78,11 +114,12 @@ void GeneticAlgorithm::mutation() {
             int randomGene = std::rand() * (chromosome.size()-1);
             std::list<std::string>::iterator iterator = chromosome.begin();
             std::advance(iterator,randomGene);
-            *iterator = randomGeneValue ;
+            *iterator = std::to_string(randomGeneValue);
         }
 
     }
 }
+//TODO
 /**
  * Function to calculate the fitness of a Chromosome
  * @param chromosome Chromosome to be analysed
@@ -93,6 +130,7 @@ float GeneticAlgorithm::fitness(std::list<std::string> chromosome) {
 
     }
 }
+//TODO
 /**
  * Function to generate the initial population
  * @param populationElementsCount Population size
