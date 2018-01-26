@@ -16,9 +16,9 @@
 
 void GeneticAlgorithm::init(int generations, DataCenter dataCenter,int geneSize) {
     this->dataCenter = dataCenter ;
-    std::list<int> bestSolution ;
+    std::list<std::string> bestSolution ;
     srand (time(NULL));
-    this->generateInitialPopulation(POPULATION_SIZE,geneSize);
+    this->generateInitialPopulation(POPULATION_SIZE,geneSize,bestSolution);
     for (int i = 0; i < generations; ++i) {
         crossover(geneSize);
         mutation();
@@ -137,6 +137,6 @@ float GeneticAlgorithm::fitness(std::list<std::string> chromosome) {
  * @param geneSize Size of the gene
  * @return returns the best element of the population
  */
-float GeneticAlgorithm::generateInitialPopulation(int populationElementsCount, int geneSize) {
+float GeneticAlgorithm::generateInitialPopulation(int populationElementsCount, int geneSize, std::list<std::string> bestSolution) {
     return 0 ;
 }

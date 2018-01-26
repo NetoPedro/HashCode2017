@@ -18,7 +18,7 @@ public:
     DataCenter dataCenter;
     void init(int generations,DataCenter dataCenter,int geneSize);
 private:
-    float generateInitialPopulation(int populationElementsCount,int geneSize);
+    float generateInitialPopulation(int populationElementsCount,int geneSize,std::list<std::string> bestSolution);
     float fitness(std::list<std::string> chromosome) ;
     void selection();
     void mutation();
