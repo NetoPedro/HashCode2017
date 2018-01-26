@@ -8,10 +8,10 @@
 
 class GeneticAlgorithmTest : GeneticAlgorithm {
 public:
-    bool fitnessTesting();
-    bool selectionTesting();
-    bool crossoverTesting();
-    bool mutationTesting(); 
+    bool fitnessTest();
+    bool selectionTest();
+    bool crossoverTest();
+    bool mutationTest();
 };
 
 
