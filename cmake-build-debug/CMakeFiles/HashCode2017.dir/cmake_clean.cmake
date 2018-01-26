@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/HashCode2017.dir/Scanner/Importer.cpp.o"
   "CMakeFiles/HashCode2017.dir/Model/DataCenter.cpp.o"
   "CMakeFiles/HashCode2017.dir/GA/GeneticAlgorithm.cpp.o"
+  "CMakeFiles/HashCode2017.dir/Test/GeneticAlgorithmTest.cpp.o"
   "HashCode2017.pdb"
   "HashCode2017"
 )

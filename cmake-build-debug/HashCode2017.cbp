@@ -118,6 +118,12 @@
 		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/Scanner/Importer.h">
 			<Option target="HashCode2017"/>
 		</Unit>
+		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/Test/GeneticAlgorithmTest.cpp">
+			<Option target="HashCode2017"/>
+		</Unit>
+		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/Test/GeneticAlgorithmTest.h">
+			<Option target="HashCode2017"/>
+		</Unit>
 		<Unit filename="/Users/pedroneto/Desktop/HashCode2017/main.cpp">
 			<Option target="HashCode2017"/>
 		</Unit>

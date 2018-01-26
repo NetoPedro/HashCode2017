@@ -285,6 +285,33 @@ Scanner/Importer.cpp.s:
 	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Scanner/Importer.cpp.s
 .PHONY : Scanner/Importer.cpp.s
 
+Test/GeneticAlgorithmTest.o: Test/GeneticAlgorithmTest.cpp.o
+
+.PHONY : Test/GeneticAlgorithmTest.o
+
+# target to build an object file
+Test/GeneticAlgorithmTest.cpp.o:
+	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Test/GeneticAlgorithmTest.cpp.o
+.PHONY : Test/GeneticAlgorithmTest.cpp.o
+
+Test/GeneticAlgorithmTest.i: Test/GeneticAlgorithmTest.cpp.i
+
+.PHONY : Test/GeneticAlgorithmTest.i
+
+# target to preprocess a source file
+Test/GeneticAlgorithmTest.cpp.i:
+	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Test/GeneticAlgorithmTest.cpp.i
+.PHONY : Test/GeneticAlgorithmTest.cpp.i
+
+Test/GeneticAlgorithmTest.s: Test/GeneticAlgorithmTest.cpp.s
+
+.PHONY : Test/GeneticAlgorithmTest.s
+
+# target to generate assembly for a file
+Test/GeneticAlgorithmTest.cpp.s:
+	$(MAKE) -f CMakeFiles/HashCode2017.dir/build.make CMakeFiles/HashCode2017.dir/Test/GeneticAlgorithmTest.cpp.s
+.PHONY : Test/GeneticAlgorithmTest.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -339,6 +366,9 @@ help:
 	@echo "... Scanner/Importer.o"
 	@echo "... Scanner/Importer.i"
 	@echo "... Scanner/Importer.s"
+	@echo "... Test/GeneticAlgorithmTest.o"
+	@echo "... Test/GeneticAlgorithmTest.i"
+	@echo "... Test/GeneticAlgorithmTest.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
