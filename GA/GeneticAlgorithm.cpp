@@ -126,9 +126,27 @@ void GeneticAlgorithm::mutation() {
  * @return Returns the fitness value
  */
 float GeneticAlgorithm::fitness(std::list<std::string> chromosome) {
+    std::list<CacheServer*> caches = this->dataCenter.caches;
+    std::list<CacheServer*>::iterator cacheIterator = caches.begin();
+    int freeSpace = -1 ;
     for (std::string gene : chromosome) {
-
+        CacheServer *cacheServer = (CacheServer*) *cacheIterator;
+        if(freeSpace == -1) freeSpace = cacheServer->maxCapacity;
+        Video *video = dataCenter.videoById(atoi(gene.c_str()));
+        if(video->size <= freeSpace){
+            cacheServer->videos.insert(cacheServer->videos.begin(),video);
+            freeSpace = freeSpace - video->size;
+        }
+        else{
+            cacheIterator++ ;
+            cacheServer = (CacheServer*) *cacheIterator;
+            freeSpace = cacheServer->maxCapacity ;
+            cacheServer->videos.insert(cacheServer->videos.begin(),video);
+            freeSpace = freeSpace - video->size ;
+        }
     }
+
+    //TODO calculate now the cost of the requests for each endpoint
 }
 //TODO
 /**
