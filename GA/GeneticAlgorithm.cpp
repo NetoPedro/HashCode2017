@@ -25,6 +25,7 @@ void GeneticAlgorithm::init(int generations, DataCenter dataCenter,int geneSize)
         selection();
     }
 }
+//FIXME Crossover using 2 points spaced with intervals multiple of cache size
 /**
  * Function to apply a crossover technique in the population
  * Uses a random mask to cross parents
@@ -165,7 +166,7 @@ float GeneticAlgorithm::fitness(std::list<std::string> chromosome) {
                 }
             }
             if (!inCache) latency = endpoint->serverLatency ;
-            fitnessValue += latency;
+            fitnessValue += latency * request.second;
         }
     }
     return fitnessValue;
