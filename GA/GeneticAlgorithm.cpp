@@ -24,6 +24,14 @@ void GeneticAlgorithm::init(int generations, DataCenter dataCenter) {
         mutation();
         selection();
     }
+    for (std::list<std::string> strings : this->population) {
+        for(std::string string : strings){
+            std::cout << string << " " ;
+        }
+
+        std::cout << std::endl;
+        fitness(strings);
+    }
 }
 //FIXME Crossover using 2 points spaced with intervals multiple of cache size
 /**
@@ -96,11 +104,11 @@ void GeneticAlgorithm::selection() {
         std::list<std::string> parent1 =  *it1;
         auto it2 = std::next(this->population.begin(), j+1);
         std::list<std::string> parent2 = *it2 ;
-        if(fitness(parent1) > fitness(parent2)){
-            this->population.remove(*it2);
+        if(fitness(parent1) < fitness(parent2)){
+            this->population.remove(parent2);
         }
         else{
-            this->population.remove(*it1);
+            this->population.remove(parent1);
         }
 
     }
@@ -129,6 +137,9 @@ void GeneticAlgorithm::mutation() {
  */
 float GeneticAlgorithm::fitness(std::list<std::string> chromosome) {
     std::list<CacheServer*> caches = this->dataCenter.caches;
+    for(CacheServer *cacheServer : caches){
+        cacheServer->videos.clear();
+    }
     std::list<CacheServer*>::iterator cacheIterator = caches.begin();
     int freeSpace = -1 ;
     for (std::string gene : chromosome) {
@@ -154,7 +165,7 @@ float GeneticAlgorithm::fitness(std::list<std::string> chromosome) {
             int latency = 0;
             bool inCache = false ;
             for(std::pair<int,float > cacheConnection : endpoint->cacheLatency){
-                int cacheId = request.first ;
+                int cacheId = cacheConnection.first ;
                 CacheServer *cache = this->dataCenter.cacheById(cacheId);
                 for(Video *v : cache->videos){
                     if (v->id == videoId){
@@ -171,6 +182,7 @@ float GeneticAlgorithm::fitness(std::list<std::string> chromosome) {
             fitnessValue += latency * request.second;
         }
     }
+    std::cout << "Fitness == " << fitnessValue << std::endl;
     return fitnessValue;
 }
 //TODO
@@ -181,5 +193,41 @@ float GeneticAlgorithm::fitness(std::list<std::string> chromosome) {
  * @return returns the best element of the population
  */
 float GeneticAlgorithm::generateInitialPopulation(int populationElementsCount, std::list<std::string> bestSolution) {
-    return 0 ;
+    int cacheSize = (*dataCenter.caches.begin())->maxCapacity;
+    int cacheCount = dataCenter.caches.size();
+    int videosCount = dataCenter.videos.size();
+    std::list<std::list<std::string>>::iterator populationIterator = population.begin();
+    srand (time(NULL));
+    for (int i = 0; i < populationElementsCount; ++i) {
+        std::list<std::string> newMember = *(new std::list<std::string>());
+        int actualCache = 0;
+        int freeSpace = -1;
+        int newNode = 0;
+        while(true){
+            newNode = rand() % videosCount ;
+            Video *video = dataCenter.videoById(newNode);
+            std::list<CacheServer*>::iterator caches = dataCenter.caches.begin();
+            CacheServer *cacheServer = (CacheServer*) *caches;
+            if(freeSpace == -1) freeSpace = cacheServer->maxCapacity;
+            if(video->size <= freeSpace){
+                cacheServer->videos.insert(cacheServer->videos.begin(),video);
+                freeSpace = freeSpace - video->size;
+            }
+            else{
+                caches++ ;
+                actualCache++;
+                if (actualCache==cacheCount) break;
+                cacheServer = (CacheServer*) *caches;
+                freeSpace = cacheServer->maxCapacity ;
+                cacheServer->videos.insert(cacheServer->videos.begin(),video);
+                freeSpace = freeSpace - video->size ;
+            }
+            newMember.insert((newMember).begin(),std::to_string(newNode));
+
+        }
+        this->population.insert(populationIterator,newMember);
+        populationIterator++;
+    }
+
+
 }
