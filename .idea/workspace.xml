@@ -13,6 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4f67cc3e-ed54-4fa9-9b40-2a92971fa46e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/GA/GeneticAlgorithm.cpp" afterPath="$PROJECT_DIR$/GA/GeneticAlgorithm.cpp" />
+      <change beforePath="$PROJECT_DIR$/GA/GeneticAlgorithm.h" afterPath="$PROJECT_DIR$/GA/GeneticAlgorithm.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,8 +29,8 @@
       <file leaf-file-name="GeneticAlgorithm.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GA/GeneticAlgorithm.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1030">
-              <caret line="27" column="77" lean-forward="false" selection-start-line="27" selection-start-column="77" selection-end-line="27" selection-end-column="77" />
+            <state relative-caret-position="602">
+              <caret line="182" column="77" lean-forward="false" selection-start-line="182" selection-start-column="77" selection-end-line="182" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -81,7 +82,7 @@
         <entry file="file://$PROJECT_DIR$/GA/GeneticAlgorithm.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="20" column="77" lean-forward="false" selection-start-line="20" selection-start-column="77" selection-end-line="20" selection-end-column="77" />
+              <caret line="20" column="63" lean-forward="false" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
               <folding>
                 <element signature="e#127#142#0" expanded="true" />
               </folding>
@@ -116,11 +117,11 @@
         <option value="$PROJECT_DIR$/Importer.cpp" />
         <option value="$PROJECT_DIR$/Scanner/Importer.cpp" />
         <option value="$PROJECT_DIR$/Test/GeneticAlgorithmTest.h" />
-        <option value="$PROJECT_DIR$/GA/GeneticAlgorithm.h" />
         <option value="$PROJECT_DIR$/Model/CacheServer.h" />
         <option value="$PROJECT_DIR$/Model/DataCenter.h" />
         <option value="$PROJECT_DIR$/Model/DataCenter.cpp" />
         <option value="$PROJECT_DIR$/GA/GeneticAlgorithm.cpp" />
+        <option value="$PROJECT_DIR$/GA/GeneticAlgorithm.h" />
       </list>
     </option>
   </component>
@@ -221,23 +222,23 @@
       <option name="presentableId" value="Default" />
       <updated>1516390987710</updated>
       <workItem from="1516390989139" duration="8697000" />
-      <workItem from="1516977022439" duration="5225000" />
+      <workItem from="1516977022439" duration="5403000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13922000" />
+    <option name="totallyTimeSpent" value="14100000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24609375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -389,16 +390,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GA/GeneticAlgorithm.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="77" lean-forward="false" selection-start-line="20" selection-start-column="77" selection-end-line="20" selection-end-column="77" />
-          <folding>
-            <element signature="e#127#142#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Model/Endpoint.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -443,10 +434,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/GA/GeneticAlgorithm.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="63" lean-forward="false" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
+          <folding>
+            <element signature="e#127#142#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/GA/GeneticAlgorithm.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1030">
-          <caret line="27" column="77" lean-forward="false" selection-start-line="27" selection-start-column="77" selection-end-line="27" selection-end-column="77" />
+        <state relative-caret-position="602">
+          <caret line="182" column="77" lean-forward="false" selection-start-line="182" selection-start-column="77" selection-end-line="182" selection-end-column="77" />
           <folding />
         </state>
       </provider>

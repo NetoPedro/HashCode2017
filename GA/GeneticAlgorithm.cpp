@@ -14,13 +14,13 @@
  * @param geneSize Size of the Chromosome
  */
 
-void GeneticAlgorithm::init(int generations, DataCenter dataCenter,int geneSize) {
+void GeneticAlgorithm::init(int generations, DataCenter dataCenter) {
     this->dataCenter = dataCenter ;
     std::list<std::string> bestSolution ;
     srand (time(NULL));
-    this->generateInitialPopulation(POPULATION_SIZE,geneSize,bestSolution);
+    this->generateInitialPopulation(POPULATION_SIZE,bestSolution);
     for (int i = 0; i < generations; ++i) {
-        crossover(geneSize);
+        crossover();
         mutation();
         selection();
     }
@@ -31,14 +31,16 @@ void GeneticAlgorithm::init(int generations, DataCenter dataCenter,int geneSize)
  * Uses a random mask to cross parents
  * @param geneSize Size of the chromosome
  */
-void GeneticAlgorithm::crossover(int geneSize) {
+void GeneticAlgorithm::crossover() {
     std::list<int> newMembers;
     std::string mask= "" ;
 
-    for (int i = 0; i < geneSize; ++i) {
+   /* for (int i = 0; i < geneSize; ++i) {
         int rand = std::rand() % 2 ;
         mask += rand;
-    }
+    }*/
+
+
     std::list<std::list<std::string>> *descendants = new std::list<std::list<std::string>>();
     std::list<std::list<std::string>>::iterator iterator = descendants->begin();
     for (int j = 0; j < POPULATION_SIZE ; j+=2) {
@@ -178,6 +180,6 @@ float GeneticAlgorithm::fitness(std::list<std::string> chromosome) {
  * @param geneSize Size of the gene
  * @return returns the best element of the population
  */
-float GeneticAlgorithm::generateInitialPopulation(int populationElementsCount, int geneSize, std::list<std::string> bestSolution) {
+float GeneticAlgorithm::generateInitialPopulation(int populationElementsCount, std::list<std::string> bestSolution) {
     return 0 ;
 }

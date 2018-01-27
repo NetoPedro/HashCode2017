@@ -16,13 +16,13 @@ public:
     //
     std::list<std::list<std::string>> population;
     DataCenter dataCenter;
-    void init(int generations,DataCenter dataCenter,int geneSize);
+    void init(int generations,DataCenter dataCenter);
 private:
-    float generateInitialPopulation(int populationElementsCount,int geneSize,std::list<std::string> bestSolution);
+    float generateInitialPopulation(int populationElementsCount,std::list<std::string> bestSolution);
     float fitness(std::list<std::string> chromosome) ;
     void selection();
     void mutation();
-    void crossover(int geneSize);
+    void crossover();
 };
 
 
