@@ -23,3 +23,12 @@ Video * DataCenter::videoById(int id) {
     }
     return nullptr;
 }
+
+CacheServer * DataCenter::cacheById(int id){
+    for(CacheServer *c : this->caches){
+        if(c->id  == id){
+            return c;
+        }
+    }
+    return nullptr;
+}

@@ -119,7 +119,6 @@ void GeneticAlgorithm::mutation() {
 
     }
 }
-//TODO
 /**
  * Function to calculate the fitness of a Chromosome
  * @param chromosome Chromosome to be analysed
@@ -145,8 +144,30 @@ float GeneticAlgorithm::fitness(std::list<std::string> chromosome) {
             freeSpace = freeSpace - video->size ;
         }
     }
-
-    //TODO calculate now the cost of the requests for each endpoint
+    float fitnessValue  = 0 ;
+    for (Endpoint* endpoint : this->dataCenter.endpoint){
+        for(std::pair<int,int> request : endpoint->requests){
+            int videoId = request.first;
+            int latency = 0;
+            bool inCache = false ;
+            for(std::pair<int,float > cacheConnection : endpoint->cacheLatency){
+                int cacheId = request.first ;
+                CacheServer *cache = this->dataCenter.cacheById(cacheId);
+                for(Video *v : cache->videos){
+                    if (v->id == videoId){
+                        if (!inCache) latency = request.second;
+                        else{
+                            if (latency > request.second) latency = request.second;
+                        }
+                        inCache = true;
+                        break;
+                    }
+                }
+            }
+            if (!inCache) latency = endpoint->serverLatency ;
+            fitnessValue += latency;
+        }
+    }
 }
 //TODO
 /**

@@ -18,6 +18,7 @@ public :
     std::list<Video*> videos ;
     Endpoint * endpointById(int id );
     Video * videoById(int id );
+    CacheServer * cacheById(int id);
 };
 
 
