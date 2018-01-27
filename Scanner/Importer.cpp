@@ -12,15 +12,15 @@
 #include "../Model/DataCenter.h"
 
 
-void Importer::import(std::string filename) {
+DataCenter Importer::import(std::string filename) {
 
     std::fstream importer;
     importer.open(filename);
+    DataCenter *dataCenter = new DataCenter(); // Initialize the DataCenter to contain all the info of the file
     //Verifies if the file was open
     if (importer.is_open()) {
         std::string elementsCountLine;
         getline(importer,elementsCountLine);
-        DataCenter *dataCenter = new DataCenter(); // Initialize the DataCenter to contain all the info of the file
         // Reads the first line of the file
         int videoCount = atoi(elementsCountLine.substr(0, elementsCountLine.find(" ")).c_str());
         elementsCountLine.erase(0, elementsCountLine.find(" ") + 1);
@@ -93,5 +93,5 @@ void Importer::import(std::string filename) {
         std::cout << "";
     }
     importer.close(); // Close the file
-
+    return *dataCenter;
 }

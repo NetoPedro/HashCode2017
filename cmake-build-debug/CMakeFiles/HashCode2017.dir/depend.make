@@ -41,6 +41,11 @@ CMakeFiles/HashCode2017.dir/Test/GeneticAlgorithmTest.cpp.o: ../Model/Video.h
 CMakeFiles/HashCode2017.dir/Test/GeneticAlgorithmTest.cpp.o: ../Test/GeneticAlgorithmTest.cpp
 CMakeFiles/HashCode2017.dir/Test/GeneticAlgorithmTest.cpp.o: ../Test/GeneticAlgorithmTest.h
 
+CMakeFiles/HashCode2017.dir/main.cpp.o: ../GA/GeneticAlgorithm.h
+CMakeFiles/HashCode2017.dir/main.cpp.o: ../Model/CacheServer.h
+CMakeFiles/HashCode2017.dir/main.cpp.o: ../Model/DataCenter.h
+CMakeFiles/HashCode2017.dir/main.cpp.o: ../Model/Endpoint.h
+CMakeFiles/HashCode2017.dir/main.cpp.o: ../Model/Video.h
 CMakeFiles/HashCode2017.dir/main.cpp.o: ../Scanner/Importer.h
 CMakeFiles/HashCode2017.dir/main.cpp.o: ../main.cpp
 

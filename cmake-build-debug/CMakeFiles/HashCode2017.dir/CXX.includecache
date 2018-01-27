@@ -85,6 +85,8 @@ Importer.h
 /Users/pedroneto/Desktop/HashCode2017/Model/DataCenter.h
 
 /Users/pedroneto/Desktop/HashCode2017/Scanner/Importer.h
+../Model/DataCenter.h
+/Users/pedroneto/Desktop/HashCode2017/Model/DataCenter.h
 
 /Users/pedroneto/Desktop/HashCode2017/Test/GeneticAlgorithmTest.cpp
 GeneticAlgorithmTest.h
@@ -99,4 +101,6 @@ iostream
 -
 Scanner/Importer.h
 /Users/pedroneto/Desktop/HashCode2017/Scanner/Importer.h
+GA/GeneticAlgorithm.h
+/Users/pedroneto/Desktop/HashCode2017/GA/GeneticAlgorithm.h
 

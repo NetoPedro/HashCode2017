@@ -6,8 +6,10 @@
 #define HASHCODE2017_IMPORTER_H
 
 
+#include "../Model/DataCenter.h"
+
 class Importer {
-public : static void import(std::string filename);
+public : static DataCenter import(std::string filename);
 };
 
 
