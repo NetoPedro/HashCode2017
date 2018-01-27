@@ -12,10 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f67cc3e-ed54-4fa9-9b40-2a92971fa46e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/GA/GeneticAlgorithm.cpp" afterPath="$PROJECT_DIR$/GA/GeneticAlgorithm.cpp" />
-      <change beforePath="$PROJECT_DIR$/Model/DataCenter.cpp" afterPath="$PROJECT_DIR$/Model/DataCenter.cpp" />
-      <change beforePath="$PROJECT_DIR$/Model/DataCenter.h" afterPath="$PROJECT_DIR$/Model/DataCenter.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,8 +28,8 @@
       <file leaf-file-name="GeneticAlgorithm.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GA/GeneticAlgorithm.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+            <state relative-caret-position="324">
+              <caret line="170" column="24" lean-forward="false" selection-start-line="170" selection-start-column="24" selection-end-line="170" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -224,12 +221,12 @@
       <option name="presentableId" value="Default" />
       <updated>1516390987710</updated>
       <workItem from="1516390989139" duration="8697000" />
-      <workItem from="1516977022439" duration="4527000" />
+      <workItem from="1516977022439" duration="4602000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13224000" />
+    <option name="totallyTimeSpent" value="13299000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -448,8 +445,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GA/GeneticAlgorithm.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+        <state relative-caret-position="324">
+          <caret line="170" column="24" lean-forward="false" selection-start-line="170" selection-start-column="24" selection-end-line="170" selection-end-column="24" />
           <folding />
         </state>
       </provider>

@@ -168,6 +168,7 @@ float GeneticAlgorithm::fitness(std::list<std::string> chromosome) {
             fitnessValue += latency;
         }
     }
+    return fitnessValue;
 }
 //TODO
 /**
