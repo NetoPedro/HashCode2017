@@ -35,7 +35,6 @@ void GeneticAlgorithm::init(int generations, DataCenter dataCenter) {
         fitness(strings);
     }
 }
-//FIXME Crossover using 2 points spaced with intervals multiple of cache size
 /**
  * Function to apply a crossover technique in the population
  * Uses a random mask to cross parents
@@ -53,6 +52,7 @@ void GeneticAlgorithm::crossover() {
     while (true) {
         point1 = rand() % (cacheCount - 2) + 1;
         point2 = rand() % (cacheCount - 2) + 1 ;
+
         if (point2 > point1) break;
     }
     std::list<std::list<std::string>> *descendants = new std::list<std::list<std::string>>();
@@ -75,6 +75,8 @@ void GeneticAlgorithm::crossover() {
         int actualCache = 0;
         int freeSpace1 = -1 ;
         for (;;) {
+            if(parent1Count == parent1.size() -1) break;
+
             std::string gene  = *parent1Iterator;
             CacheServer *cacheServer = (CacheServer*) *cacheIterator1;
             if(freeSpace1 == -1) freeSpace1 = cacheServer->maxCapacity;
@@ -100,6 +102,8 @@ void GeneticAlgorithm::crossover() {
         int actualCache2 = 0;
         int freeSpace2 = -1 ;
         for (;;) {
+            if(parent2Count == parent2.size() -1) break;
+
             std::string gene  = *parent2Iterator;
             CacheServer *cacheServer = (CacheServer*) *cacheIterator2;
             if(freeSpace2 == -1) freeSpace2 = cacheServer->maxCapacity;
@@ -122,6 +126,8 @@ void GeneticAlgorithm::crossover() {
         }
 
         for (;;) {
+            if(parent2Count == parent2.size() -1) break;
+
             std::string gene  = *parent2Iterator;
             CacheServer *cacheServer = (CacheServer*) *cacheIterator2;
             if(freeSpace2 == -1) freeSpace2 = cacheServer->maxCapacity;
@@ -144,6 +150,8 @@ void GeneticAlgorithm::crossover() {
         }
 
         for (;;) {
+            if(parent1Count == parent1.size() -1) break;
+
             std::string gene  = *parent1Iterator;
 
             CacheServer *cacheServer = (CacheServer*) *cacheIterator1;
