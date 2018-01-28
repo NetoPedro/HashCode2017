@@ -19,6 +19,7 @@ public :
     Endpoint * endpointById(int id );
     Video * videoById(int id );
     CacheServer * cacheById(int id);
+    long timeAllServerRequests();
 };
 
 

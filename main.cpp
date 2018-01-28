@@ -3,9 +3,9 @@
 #include "GA/GeneticAlgorithm.h"
 
 int main() {
-    DataCenter dataCenter = Importer::import("../Input/ewf.txt");
+    DataCenter dataCenter = Importer::import("../Input/videos_worth_spreading.in");
     GeneticAlgorithm *geneticAlgorithm = new GeneticAlgorithm();
-    geneticAlgorithm->init(10000,dataCenter);
+    geneticAlgorithm->init(500,dataCenter);
     std::cout << "Hello, World!" << std::endl;
 
     return 0;

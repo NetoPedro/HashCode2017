@@ -4,8 +4,8 @@
 
 #include "GeneticAlgorithm.h"
 
-#define POPULATION_SIZE 10
-#define MUTATION_TAX 0.15
+#define POPULATION_SIZE 5000
+#define MUTATION_TAX 0.95
 
 /**
  * Function to start the Genetic Algorithm
@@ -19,6 +19,7 @@ void GeneticAlgorithm::init(int generations, DataCenter dataCenter) {
     srand (time(NULL));
     this->generateInitialPopulation(POPULATION_SIZE);
     for (int i = 0; i < generations; ++i) {
+        std::cout << "Geração " << generations << std::endl;
      //   std::cout << "Iniciando Cross" << std::endl;
         crossover();
        // std::cout << "Iniciando Mut" << std::endl;
@@ -38,6 +39,14 @@ void GeneticAlgorithm::init(int generations, DataCenter dataCenter) {
         std::cout << std::endl;
         fitness(strings);
     }
+    std::cout << "Best : " ;
+    for(std::string string : bestSolution){
+        std::cout << string << " " ;
+    }
+
+    std::cout << std::endl;
+    fitness(bestSolution);
+
 }
 /**
  * Function to apply a crossover technique in the population
@@ -194,7 +203,12 @@ void GeneticAlgorithm::crossover() {
             parent2Iterator++;
         }
 
-
+        if(fitness(descendant1)<fitness(bestSolution)){
+            bestSolution = descendant1;
+        }
+        if(fitness(*descendant2)<fitness(bestSolution)){
+            bestSolution = *descendant2;
+        }
         descendants->insert(iterator,descendant1);
         descendants->insert(iterator,*descendant2);
     }
@@ -265,6 +279,7 @@ void GeneticAlgorithm::mutation() {
  */
 float GeneticAlgorithm::fitness(std::list<std::string> chromosome) {
     std::list<CacheServer*> caches = this->dataCenter.caches;
+    int numberOfRequests = 0;
     for(CacheServer *cacheServer : caches){
         cacheServer->videos.clear();
     }
@@ -297,21 +312,23 @@ float GeneticAlgorithm::fitness(std::list<std::string> chromosome) {
                 CacheServer *cache = this->dataCenter.cacheById(cacheId);
                 for(Video *v : cache->videos){
                     if (v->id == videoId){
-                        if (!inCache) latency = request.second;
+                        if (!inCache) latency = endpoint->serverLatency - endpoint->cacheLatency[cache->id];
                         else{
-                            if (latency > request.second) latency = request.second;
+                            if (latency + endpoint->serverLatency > request.second) latency = endpoint->serverLatency - endpoint->cacheLatency[cache->id];
                         }
                         inCache = true;
                         break;
                     }
                 }
             }
-            if (!inCache) latency = endpoint->serverLatency ;
+            if (!inCache) latency = 0 ;
+            numberOfRequests += request.second;
             fitnessValue += latency * request.second;
         }
     }
-    std::cout << "Fitness == " << fitnessValue << std::endl;
-    return fitnessValue;
+    fitnessValue = fitnessValue/numberOfRequests;
+    std::cout << "Fitness == " << fitnessValue * 1000<< std::endl;
+    return fitnessValue * -1;
 }
 //TODO Find the fittest
 /**
@@ -325,6 +342,7 @@ float GeneticAlgorithm::generateInitialPopulation(int populationElementsCount) {
     int videosCount = dataCenter.videos.size();
     std::list<std::list<std::string>>::iterator populationIterator = population.begin();
     srand (time(NULL));
+    int bestSolutionFitness = 0;
     for (int i = 0; i < populationElementsCount; ++i) {
         std::list<std::string> newMember = *(new std::list<std::string>());
         int actualCache = 0;
@@ -349,14 +367,17 @@ float GeneticAlgorithm::generateInitialPopulation(int populationElementsCount) {
                 cacheServer->videos.insert(cacheServer->videos.begin(),video);
                 freeSpace = freeSpace - video->size ;
             }
-            if (i == 0) bestSolution = newMember;
-            else{
-                if(fitness(newMember)<fitness(bestSolution)){
-                    bestSolution = newMember;
-                }
-            }
+
             newMember.insert((newMember).begin(),std::to_string(newNode));
 
+        }
+        if (i == 0) {bestSolution = newMember;
+        bestSolutionFitness = fitness(newMember);}
+        else{
+            if(fitness(newMember)<bestSolutionFitness){
+                bestSolution = newMember;
+                bestSolutionFitness = fitness(newMember);
+            }
         }
         this->population.insert(populationIterator,newMember);
         populationIterator++;
