@@ -14,13 +14,10 @@
     <list default="true" id="4f67cc3e-ed54-4fa9-9b40-2a92971fa46e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/GA/GeneticAlgorithm.cpp" afterPath="$PROJECT_DIR$/GA/GeneticAlgorithm.cpp" />
-      <change beforePath="$PROJECT_DIR$/Model/CacheServer.h" afterPath="$PROJECT_DIR$/Model/CacheServer.h" />
       <change beforePath="$PROJECT_DIR$/Model/DataCenter.cpp" afterPath="$PROJECT_DIR$/Model/DataCenter.cpp" />
       <change beforePath="$PROJECT_DIR$/Model/DataCenter.h" afterPath="$PROJECT_DIR$/Model/DataCenter.h" />
-      <change beforePath="$PROJECT_DIR$/Model/Endpoint.h" afterPath="$PROJECT_DIR$/Model/Endpoint.h" />
       <change beforePath="$PROJECT_DIR$/Scanner/Importer.cpp" afterPath="$PROJECT_DIR$/Scanner/Importer.cpp" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/HashCode2017" afterPath="$PROJECT_DIR$/cmake-build-debug/HashCode2017" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,8 +33,8 @@
       <file leaf-file-name="GeneticAlgorithm.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GA/GeneticAlgorithm.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="402" column="46" lean-forward="false" selection-start-line="402" selection-start-column="46" selection-end-line="402" selection-end-column="46" />
+            <state relative-caret-position="-368">
+              <caret line="163" column="64" lean-forward="false" selection-start-line="163" selection-start-column="64" selection-end-line="163" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -46,8 +43,8 @@
       <file leaf-file-name="Importer.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Scanner/Importer.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="34" column="56" lean-forward="false" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
+            <state relative-caret-position="240">
+              <caret line="44" column="65" lean-forward="false" selection-start-line="44" selection-start-column="65" selection-end-line="44" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -66,9 +63,11 @@
       <file leaf-file-name="DataCenter.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model/DataCenter.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-              <folding />
+            <state relative-caret-position="300">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding>
+                <element signature="e#44#59#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -86,8 +85,8 @@
       <file leaf-file-name="DataCenter.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model/DataCenter.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="39" column="66" lean-forward="false" selection-start-line="39" selection-start-column="66" selection-end-line="39" selection-end-column="66" />
+            <state relative-caret-position="116">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -96,8 +95,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="28" lean-forward="false" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+            <state relative-caret-position="135">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -150,13 +149,13 @@
         <option value="$PROJECT_DIR$/Test/GeneticAlgorithmTest.h" />
         <option value="$PROJECT_DIR$/Scanner/Importer.h" />
         <option value="$PROJECT_DIR$/GA/GeneticAlgorithm.h" />
-        <option value="$PROJECT_DIR$/Model/DataCenter.cpp" />
         <option value="$PROJECT_DIR$/Model/Endpoint.h" />
         <option value="$PROJECT_DIR$/Model/CacheServer.h" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/Scanner/Importer.cpp" />
+        <option value="$PROJECT_DIR$/Model/DataCenter.cpp" />
         <option value="$PROJECT_DIR$/Model/DataCenter.h" />
         <option value="$PROJECT_DIR$/GA/GeneticAlgorithm.cpp" />
-        <option value="$PROJECT_DIR$/Scanner/Importer.cpp" />
       </list>
     </option>
   </component>
@@ -267,12 +266,12 @@
       <option name="presentableId" value="Default" />
       <updated>1516390987710</updated>
       <workItem from="1516390989139" duration="8697000" />
-      <workItem from="1516977022439" duration="28205000" />
+      <workItem from="1516977022439" duration="28821000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36902000" />
+    <option name="totallyTimeSpent" value="37518000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -304,7 +303,14 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="55" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/main.cpp</url>
+          <line>7</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="57" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -495,14 +501,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/CacheServer.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Developer/CommandLineTools/usr/include/c++/v1/list">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
@@ -511,10 +509,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Model/CacheServer.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scanner/Importer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="44" column="65" lean-forward="false" selection-start-line="44" selection-start-column="65" selection-end-line="44" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="28" lean-forward="false" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -523,32 +537,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Model/DataCenter.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="39" column="66" lean-forward="false" selection-start-line="39" selection-start-column="66" selection-end-line="39" selection-end-column="66" />
+        <state relative-caret-position="116">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Model/DataCenter.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scanner/Importer.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="34" column="56" lean-forward="false" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
-          <folding />
+        <state relative-caret-position="300">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="e#44#59#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GA/GeneticAlgorithm.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="402" column="46" lean-forward="false" selection-start-line="402" selection-start-column="46" selection-end-line="402" selection-end-column="46" />
+        <state relative-caret-position="-368">
+          <caret line="163" column="64" lean-forward="false" selection-start-line="163" selection-start-column="64" selection-end-line="163" selection-end-column="64" />
           <folding />
         </state>
       </provider>

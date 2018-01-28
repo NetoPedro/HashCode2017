@@ -42,14 +42,13 @@ DataCenter Importer::import(std::string filename) {
         if (videoCount != 0) { // Verifies if there is any video to import
             std::string videoLine;
             getline(importer,videoLine);
-            std::list<Video*>::iterator it = dataCenter->videos.begin();
+            dataCenter->videos = std::vector<Video*>(videoCount);
             for (int i = 0; i < videoCount; ++i) { // Creates objects of the type Video with there size and ID
                 Video *video = new Video();
                 video->id = i ;
                 video->size = atoi(videoLine.substr(0,videoLine.find(" ")).c_str());
                 videoLine.erase(0,videoLine.find(" ") + 1);
-                dataCenter->videos.insert(it,video); //Store the created video into the datacenter
-                ++it;
+                dataCenter->videos[i]=video; //Store the created video into the datacenter
             }
         }
         std::list<Endpoint*>::iterator itEndpoints = dataCenter->endpoint.begin();
