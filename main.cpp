@@ -5,7 +5,7 @@
 int main() {
     DataCenter dataCenter = Importer::import("../Input/ewf.txt");
     GeneticAlgorithm *geneticAlgorithm = new GeneticAlgorithm();
-    geneticAlgorithm->init(100,dataCenter);
+    geneticAlgorithm->init(10000,dataCenter);
     std::cout << "Hello, World!" << std::endl;
 
     return 0;
