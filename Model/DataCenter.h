@@ -2,6 +2,7 @@
 // Created by Pedro Neto on 15/01/18.
 //
 #include <list>
+#include <vector>
 #include <iostream>
 #include "Video.h"
 #include "CacheServer.h"
@@ -13,7 +14,7 @@
 
 class DataCenter {
 public :
-    std::list<CacheServer*> caches ;
+    std::vector<CacheServer*> caches ;
     std::list<Endpoint*> endpoint ;
     std::list<Video*> videos ;
     Endpoint * endpointById(int id );

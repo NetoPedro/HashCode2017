@@ -11,7 +11,7 @@
 class CacheServer {
 public: int id ;
     double maxCapacity ;
-    std::list<Video*> videos ;
+    std::list<int> videos ;
 };
 
 

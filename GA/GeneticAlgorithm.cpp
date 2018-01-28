@@ -4,7 +4,7 @@
 
 #include "GeneticAlgorithm.h"
 
-#define POPULATION_SIZE 5000
+#define POPULATION_SIZE 10
 #define MUTATION_TAX 0.95
 
 /**
@@ -55,7 +55,7 @@ void GeneticAlgorithm::init(int generations, DataCenter dataCenter) {
  */
 void GeneticAlgorithm::crossover() {
     std::list<int> newMembers;
-    std::list<CacheServer*> caches = this->dataCenter.caches;
+    std::vector<CacheServer*> caches = this->dataCenter.caches;
     for(CacheServer *cacheServer : caches){
         cacheServer->videos.clear();
     }
@@ -71,15 +71,16 @@ void GeneticAlgorithm::crossover() {
         std::list<std::string> parent1 = ( std::list<std::string>) *it1;
         auto it2 = std::next(this->population.begin(), j+1);
         std::list<std::string> parent2 = ( std::list<std::string>) *it2;
-        int cacheSize1 = findMaxCacheNumber(parent1) ;
-        int cacheSize2 = findMaxCacheNumber(parent2) ;
-        if (cacheSize1 > cacheSize2){
+       // int cacheSize1 = findMaxCacheNumber(parent1) ;
+       // int cacheSize2 = findMaxCacheNumber(parent2) ;
+       /* if (cacheSize1 > cacheSize2){
             point1 = rand() % (cacheSize2-1)+1;
 
         } else{
             point1 = rand() % (cacheSize1-1)+1;
 
-        }
+        }*/
+        point1 = rand() % (cacheCount - 1) + 1;
 
 
         std::list<std::string>::iterator parent1Iterator = parent1.begin();
@@ -89,7 +90,7 @@ void GeneticAlgorithm::crossover() {
         std::list<std::string>::iterator descandant1Iterator = descendant1.begin();
         std::list<std::string> *descendant2 = new std::list<std::string>() ;
         std::list<std::string>::iterator descandant2Iterator = descendant2->begin();
-        std::list<CacheServer*>::iterator cacheIterator1 = caches.begin();
+        //std::list<CacheServer*>::iterator cacheIterator1 = caches.begin();
         int parent1Count = 0;
         int parent2Count = 0;
         int actualCache = 0;
@@ -109,7 +110,7 @@ void GeneticAlgorithm::crossover() {
           //  if(parent1Count == parent1.size() -1) break;
 
             std::string gene  = *parent1Iterator;
-            CacheServer *cacheServer = (CacheServer*) *cacheIterator1;
+            CacheServer *cacheServer = caches[actualCache];
             if(freeSpace1 == -1) freeSpace1 = cacheServer->maxCapacity;
             Video *video = dataCenter.videoById(atoi(gene.c_str()));
             if(video->size <= freeSpace1){
@@ -117,9 +118,9 @@ void GeneticAlgorithm::crossover() {
                 freeSpace1 = freeSpace1 - video->size;
             }
             else{
-                cacheIterator1++ ;
+               // cacheIterator1++ ;
                 actualCache++;
-                cacheServer = (CacheServer*) *cacheIterator1;
+                cacheServer = caches[actualCache];
                 freeSpace1 = cacheServer->maxCapacity ;
                 if(point1 == actualCache ) break;
                 descendant1.insert(descendant1.begin(),std::to_string(video->id));
@@ -129,14 +130,14 @@ void GeneticAlgorithm::crossover() {
             parent1Iterator++;
         }
 
-        std::list<CacheServer*>::iterator cacheIterator2 = caches.begin();
+     //   std::list<CacheServer*>::iterator cacheIterator2 = caches.begin();
         int actualCache2 = 0;
         int freeSpace2 = -1 ;
         for (;;) {
         //    if(parent2Count == parent2.size() -1) break;
 
             std::string gene  = *parent2Iterator;
-            CacheServer *cacheServer = (CacheServer*) *cacheIterator2;
+            CacheServer *cacheServer = caches[actualCache2];
             if(freeSpace2 == -1) freeSpace2 = cacheServer->maxCapacity;
             Video *video = dataCenter.videoById(atoi(gene.c_str()));
             if(video->size <= freeSpace2){
@@ -144,9 +145,8 @@ void GeneticAlgorithm::crossover() {
                 freeSpace2 = freeSpace2 - video->size;
             }
             else{
-                cacheIterator2++ ;
                 actualCache2++;
-                cacheServer = (CacheServer*) *cacheIterator2;
+                cacheServer = caches[actualCache2];
                 freeSpace2 = cacheServer->maxCapacity ;
                 if(point1 == actualCache2 ) break;
                 descendant2->insert(descendant2->begin(),std::to_string(video->id));
@@ -160,7 +160,7 @@ void GeneticAlgorithm::crossover() {
         for (;;) {
             if(parent1Count == parent1.size() -1) break;
             std::string gene  = *parent1Iterator;
-            CacheServer *cacheServer = (CacheServer*) *cacheIterator1;
+            CacheServer *cacheServer = caches[actualCache];
             if(freeSpace1 == -1) freeSpace1 = cacheServer->maxCapacity;
             Video *video = dataCenter.videoById(atoi(gene.c_str()));
             if(video->size <= freeSpace1){
@@ -168,9 +168,8 @@ void GeneticAlgorithm::crossover() {
                 freeSpace1 = freeSpace1 - video->size;
             }
             else{
-                cacheIterator1++ ;
                 actualCache++;
-                cacheServer = (CacheServer*) *cacheIterator1;
+                cacheServer = caches[actualCache];
                 freeSpace1 = cacheServer->maxCapacity ;
                 descendant2->insert(descendant2->begin(),std::to_string(video->id));
                 freeSpace1 = freeSpace1 - video->size ;
@@ -184,7 +183,7 @@ void GeneticAlgorithm::crossover() {
 
             std::string gene  = *parent2Iterator;
 
-            CacheServer *cacheServer = (CacheServer*) *cacheIterator2;
+            CacheServer *cacheServer = caches[actualCache2];
             if(freeSpace2 == -1) freeSpace2 = cacheServer->maxCapacity;
             Video *video = dataCenter.videoById(atoi(gene.c_str()));
             if(video->size <= freeSpace2){
@@ -192,9 +191,8 @@ void GeneticAlgorithm::crossover() {
                 freeSpace2 = freeSpace2 - video->size;
             }
             else{
-                cacheIterator2++ ;
                 actualCache2++;
-                cacheServer = (CacheServer*) *cacheIterator2;
+                cacheServer = caches[actualCache];
                 freeSpace2 = cacheServer->maxCapacity ;
                 descendant1.insert(descendant1.begin(),std::to_string(video->id));
                 freeSpace2 = freeSpace2 - video->size ;
@@ -278,26 +276,26 @@ void GeneticAlgorithm::mutation() {
  * @return Returns the fitness value
  */
 float GeneticAlgorithm::fitness(std::list<std::string> chromosome) {
-    std::list<CacheServer*> caches = this->dataCenter.caches;
+    std::vector<CacheServer*> caches = this->dataCenter.caches;
     int numberOfRequests = 0;
     for(CacheServer *cacheServer : caches){
         cacheServer->videos.clear();
     }
-    std::list<CacheServer*>::iterator cacheIterator = caches.begin();
+    int actualCache = 0;
     int freeSpace = -1 ;
     for (std::string gene : chromosome) {
-        CacheServer *cacheServer = (CacheServer*) *cacheIterator;
+        CacheServer *cacheServer = caches[actualCache];
         if(freeSpace == -1) freeSpace = cacheServer->maxCapacity;
         Video *video = dataCenter.videoById(atoi(gene.c_str()));
         if(video->size <= freeSpace){
-            cacheServer->videos.insert(cacheServer->videos.begin(),video);
+            cacheServer->videos.insert(cacheServer->videos.begin(),video->id);
             freeSpace = freeSpace - video->size;
         }
         else{
-            cacheIterator++ ;
-            cacheServer = (CacheServer*) *cacheIterator;
+            actualCache++;
+            cacheServer = caches[actualCache];
             freeSpace = cacheServer->maxCapacity ;
-            cacheServer->videos.insert(cacheServer->videos.begin(),video);
+            cacheServer->videos.insert(cacheServer->videos.begin(),video->id);
             freeSpace = freeSpace - video->size ;
         }
     }
@@ -310,8 +308,8 @@ float GeneticAlgorithm::fitness(std::list<std::string> chromosome) {
             for(std::pair<int,float > cacheConnection : endpoint->cacheLatency){
                 int cacheId = cacheConnection.first ;
                 CacheServer *cache = this->dataCenter.cacheById(cacheId);
-                for(Video *v : cache->videos){
-                    if (v->id == videoId){
+                for(int vId : cache->videos){
+                    if (vId == videoId){
                         if (!inCache) latency = endpoint->serverLatency - endpoint->cacheLatency[cache->id];
                         else{
                             if (latency + endpoint->serverLatency > request.second) latency = endpoint->serverLatency - endpoint->cacheLatency[cache->id];
@@ -351,20 +349,19 @@ float GeneticAlgorithm::generateInitialPopulation(int populationElementsCount) {
         while(true){
             newNode = rand() % videosCount ;
             Video *video = dataCenter.videoById(newNode);
-            std::list<CacheServer*>::iterator caches = dataCenter.caches.begin();
-            CacheServer *cacheServer = (CacheServer*) *caches;
+            std::vector<CacheServer*> caches = dataCenter.caches;
+            CacheServer *cacheServer = caches[actualCache];
             if(freeSpace == -1) freeSpace = cacheServer->maxCapacity;
             if(video->size <= freeSpace){
-                cacheServer->videos.insert(cacheServer->videos.begin(),video);
+                cacheServer->videos.insert(cacheServer->videos.begin(),video->id);
                 freeSpace = freeSpace - video->size;
             }
             else{
-                caches++ ;
                 actualCache++;
                 if (actualCache==cacheCount) break;
-                cacheServer = (CacheServer*) *caches;
+                cacheServer = caches[actualCache];
                 freeSpace = cacheServer->maxCapacity ;
-                cacheServer->videos.insert(cacheServer->videos.begin(),video);
+                cacheServer->videos.insert(cacheServer->videos.begin(),video->id);
                 freeSpace = freeSpace - video->size ;
             }
 
@@ -391,20 +388,19 @@ int GeneticAlgorithm::findMaxCacheNumber(std::list<std::string> parent) {
     int parent1Count = 0;
     int actualCache = 0;
     std::list<std::string>::iterator parentIterator = parent.begin();
-    std::list<CacheServer *>::iterator cacheIterator = this->dataCenter.caches.begin();
+    std::vector<CacheServer *> caches = this->dataCenter.caches;
     for (;;) {
         if(parent1Count == parent.size() -1) break;
         std::string gene  = *parentIterator;
-        CacheServer *cacheServer = (CacheServer*) *cacheIterator;
+        CacheServer *cacheServer = caches[actualCache];
         if(freeSpace1 == -1) freeSpace1 = cacheServer->maxCapacity;
         Video *video = dataCenter.videoById(atoi(gene.c_str()));
         if(video->size <= freeSpace1){
             freeSpace1 = freeSpace1 - video->size;
         }
         else{
-            cacheIterator++;
             actualCache++;
-            cacheServer = (CacheServer*) *cacheIterator;
+            cacheServer = caches[actualCache];
             freeSpace1 = cacheServer->maxCapacity ;
             freeSpace1 = freeSpace1 - video->size ;
         }

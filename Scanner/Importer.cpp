@@ -31,13 +31,13 @@ DataCenter Importer::import(std::string filename) {
         int cacheCount = atoi(elementsCountLine.substr(0, elementsCountLine.find(" ")).c_str());
         elementsCountLine.erase(0, elementsCountLine.find(" ") + 1);
         int cacheSize = atoi(elementsCountLine.c_str());
-        std::list<CacheServer*>::iterator cacheIt = dataCenter->caches.begin();
+        //std::list<CacheServer*>::iterator cacheIt = dataCenter->caches.begin();
+        dataCenter->caches =  std::vector<CacheServer * >(cacheCount);
         for (int i = 0; i < cacheCount ; ++i) { //Creates Caches using information of the first line
-            ++cacheIt;
             CacheServer *cacheServer = new CacheServer();
             cacheServer->id = i ;
             cacheServer->maxCapacity = cacheSize;
-            dataCenter->caches.insert(cacheIt,cacheServer); //Store the created cache into the datacenter
+            dataCenter->caches[i] = cacheServer;  //Store the created cache into the datacenter
         }
         if (videoCount != 0) { // Verifies if there is any video to import
             std::string videoLine;

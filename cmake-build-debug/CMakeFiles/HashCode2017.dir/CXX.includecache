@@ -39,6 +39,8 @@ DataCenter.h
 /Users/pedroneto/Desktop/HashCode2017/Model/DataCenter.h
 list
 -
+vector
+-
 iostream
 -
 Video.h
@@ -53,7 +55,7 @@ Endpoint.h
 /Users/pedroneto/Desktop/HashCode2017/Model/Endpoint.h
 
 /Users/pedroneto/Desktop/HashCode2017/Model/Endpoint.h
-map
+unordered_map
 -
 Video.h
 /Users/pedroneto/Desktop/HashCode2017/Model/Video.h

@@ -5,7 +5,7 @@
 int main() {
     DataCenter dataCenter = Importer::import("../Input/videos_worth_spreading.in");
     GeneticAlgorithm *geneticAlgorithm = new GeneticAlgorithm();
-    geneticAlgorithm->init(500,dataCenter);
+    geneticAlgorithm->init(1,dataCenter);
     std::cout << "Hello, World!" << std::endl;
 
     return 0;
