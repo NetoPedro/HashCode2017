@@ -18,7 +18,6 @@ public :
     std::list<Endpoint*> endpoint ;
     std::vector<Video*> videos ;
     Endpoint * endpointById(int id );
-    CacheServer * cacheById(int id);
     long timeAllServerRequests();
 };
 

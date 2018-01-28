@@ -17,14 +17,6 @@ Endpoint * DataCenter::endpointById(int id ) {
 
 
 
-CacheServer * DataCenter::cacheById(int id){
-    for(CacheServer *c : this->caches){
-        if(c->id  == id){
-            return c;
-        }
-    }
-    return nullptr;
-}
 
 long DataCenter::timeAllServerRequests() {
     float toReturn = 0;

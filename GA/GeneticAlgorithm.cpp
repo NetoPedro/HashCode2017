@@ -306,7 +306,7 @@ float GeneticAlgorithm::fitness(std::list<std::string> chromosome) {
             bool inCache = false ;
             for(std::pair<int,float > cacheConnection : endpoint->cacheLatency){
                 int cacheId = cacheConnection.first ;
-                CacheServer *cache = this->dataCenter.cacheById(cacheId);
+                CacheServer *cache = this->dataCenter.caches[cacheId];
                 for(int vId : cache->videos){
                     if (vId == videoId){
                         if (!inCache) latency = endpoint->serverLatency - endpoint->cacheLatency[cache->id];
