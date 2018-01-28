@@ -15,8 +15,9 @@
 class DataCenter {
 public :
     std::vector<CacheServer*> caches ;
-    std::vector<Endpoint*> endpoint ;
-    std::vector<Video*> videos ;
+    std::vector<Endpoint> endpoint ;
+    std::vector<Video> videos ;
+
     long timeAllServerRequests();
 };
 

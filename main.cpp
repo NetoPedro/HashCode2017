@@ -3,10 +3,11 @@
 #include "GA/GeneticAlgorithm.h"
 
 int main() {
+    int initial = time(NULL);
     DataCenter dataCenter = Importer::import("../Input/videos_worth_spreading.in");
     GeneticAlgorithm *geneticAlgorithm = new GeneticAlgorithm();
-    geneticAlgorithm->init(10,dataCenter);
-    std::cout << "Hello, World!" << std::endl;
+    geneticAlgorithm->init(5,dataCenter);
+    std::cout << "Duration " << time(NULL) - initial << std::endl;
 
     return 0;
 }
