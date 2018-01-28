@@ -51,11 +51,9 @@ DataCenter Importer::import(std::string filename) {
                 dataCenter->videos[i]=video; //Store the created video into the datacenter
             }
         }
-        std::list<Endpoint*>::iterator itEndpoints = dataCenter->endpoint.begin();
-
+        dataCenter->endpoint = std::vector<Endpoint*>(endPointsCount);
         for (int i = 0; i < endPointsCount; ++i) { // Creates Endpoints
             int endPointConnections = 0 ;
-            ++itEndpoints;
             std::string endPointLine;
             getline(importer,endPointLine);
             int latencyToDataCenter = atoi(endPointLine.substr(0,endPointLine.find(" ")).c_str());
@@ -74,7 +72,7 @@ DataCenter Importer::import(std::string filename) {
                 endpoint->cacheLatency.insert(std::pair<int,float>(cacheId,cacheLatency));
 
             }
-            dataCenter->endpoint.insert(itEndpoints, (endpoint)); // Store the created endpoint into the datacenter
+            dataCenter->endpoint[i] = (endpoint); // Store the created endpoint into the datacenter
         }
         for (int i = 0; i < requestCount; ++i) { // Creates relation beetween videos and endpoints.
             std::string requestString ;
@@ -84,7 +82,7 @@ DataCenter Importer::import(std::string filename) {
             int requestEndpoint = atoi(requestString.substr(0,requestString.find(" ")).c_str());
             requestString.erase(0, requestString.find(" ") + 1);
             int quantityOfResquests = atoi(requestString.c_str());
-            Endpoint *endpoint = dataCenter->endpointById(requestEndpoint);
+            Endpoint *endpoint = dataCenter->endpoint[requestEndpoint];
             endpoint->requests.insert(std::pair<int,int>(videoID,quantityOfResquests));
 
         }

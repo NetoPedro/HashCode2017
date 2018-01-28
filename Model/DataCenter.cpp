@@ -4,17 +4,6 @@
 
 #include "DataCenter.h"
 
-Endpoint * DataCenter::endpointById(int id ) {
-
-
-    for (Endpoint *e : this->endpoint){
-        if (e->id == id){
-            return e ;
-        }
-    }
-    return nullptr;
-}
-
 
 
 

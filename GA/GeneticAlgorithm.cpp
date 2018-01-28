@@ -17,12 +17,13 @@
 void GeneticAlgorithm::init(int generations, DataCenter dataCenter) {
     this->dataCenter = dataCenter ;
     srand (time(NULL));
+    this->population = std::vector<std::list<std::string>>(POPULATION_SIZE * 2);
     this->generateInitialPopulation(POPULATION_SIZE);
     for (int i = 0; i < generations; ++i) {
         std::cout << "Geração " << i << std::endl;
      //   std::cout << "Iniciando Cross" << std::endl;
         crossover();
-       // std::cout << "Iniciando Mut" << std::endl;
+      //  std::cout << "Iniciando Mut" << std::endl;
 
         mutation();
       //  std::cout << "Iniciando Sel" << std::endl;
@@ -63,13 +64,12 @@ void GeneticAlgorithm::crossover() {
     int point1;
 
 
-    std::list<std::list<std::string>> *descendants = new std::list<std::list<std::string>>();
-    std::list<std::list<std::string>>::iterator iterator = descendants->begin();
+    //std::vector<std::list<std::string>>::iterator iterator = descendants->begin();
     for (int j = 0; j < POPULATION_SIZE ; j+=2) {
-        auto it1 = std::next(this->population.begin(), j);
-        std::list<std::string> parent1 = ( std::list<std::string>) *it1;
-        auto it2 = std::next(this->population.begin(), j+1);
-        std::list<std::string> parent2 = ( std::list<std::string>) *it2;
+        //auto it1 = std::next(this->population.begin(), j);
+        std::list<std::string> parent1 = this->population[j];
+       // auto it2 = std::next(this->population.begin(), j+1);
+        std::list<std::string> parent2 = this->population[j+1];
        // int cacheSize1 = findMaxCacheNumber(parent1) ;
        // int cacheSize2 = findMaxCacheNumber(parent2) ;
        /* if (cacheSize1 > cacheSize2){
@@ -206,10 +206,10 @@ void GeneticAlgorithm::crossover() {
         if(fitness(*descendant2)<fitness(bestSolution)){
             bestSolution = *descendant2;
         }
-        descendants->insert(iterator,descendant1);
-        descendants->insert(iterator,*descendant2);
+        (population)[POPULATION_SIZE +  j] = descendant1;
+        (population)[POPULATION_SIZE + j+1] = *descendant2;
     }
-    this->population.insert(this->population.end(),descendants->begin(),descendants->end());
+    //this->population[POPULATION_SIZE + ] = descendants ;
 }
 //Tournament selection
 /**
@@ -218,7 +218,10 @@ void GeneticAlgorithm::crossover() {
  * Uses Tournament Selection
  */
 void GeneticAlgorithm::selection() {
-    for (int j = 0; j < POPULATION_SIZE  ; j+=1) {
+    std::vector<std::list<std::string>> newPop ;
+    newPop =  std::vector<std::list<std::string>>(POPULATION_SIZE * 2);
+    int i = 0 ;
+    for (int j = 0; j < POPULATION_SIZE * 2  ; j+=2) {
      //   std::cout << "J = " << j << std::endl;
       //  std::cout << " Pop" << this->population.size() << std::endl;
 
@@ -238,19 +241,20 @@ void GeneticAlgorithm::selection() {
         if(fitness1 < fitness2){
     //        std::cout << " Removendo Parent2" << std::endl;
 
-            this->population.erase(it2);
+            (newPop)[i] = parent1;
      //       std::cout << " Fim Removendo Parent2" << std::endl;
 
         }
         else{
    //         std::cout << " Removendo Parent1" << std::endl;
-
-            this->population.erase(it1);
-    //        std::cout << " Fim Removendo Parent1" << std::endl;
+            (newPop)[i] = parent2;
+            //        std::cout << " Fim Removendo Parent1" << std::endl;
 
         }
+        i++;
 
     }
+    this->population = newPop;
 }
 /**
  * Function to apply mutation in the population
@@ -337,7 +341,7 @@ float GeneticAlgorithm::fitness(std::list<std::string> chromosome) {
 float GeneticAlgorithm::generateInitialPopulation(int populationElementsCount) {
     int cacheCount = dataCenter.caches.size();
     int videosCount = dataCenter.videos.size();
-    std::list<std::list<std::string>>::iterator populationIterator = population.begin();
+    //std::list<std::list<std::string>>::iterator populationIterator = population.begin();
     srand (time(NULL));
     int bestSolutionFitness = 0;
     for (int i = 0; i < populationElementsCount; ++i) {
@@ -375,36 +379,11 @@ float GeneticAlgorithm::generateInitialPopulation(int populationElementsCount) {
                 bestSolutionFitness = fitness(newMember);
             }
         }
-        this->population.insert(populationIterator,newMember);
-        populationIterator++;
+        this->population[i] = newMember;
+        //populationIterator++;
     }
 
 
 }
 
-int GeneticAlgorithm::findMaxCacheNumber(std::list<std::string> parent) {
-    int freeSpace1 = -1;
-    int parent1Count = 0;
-    int actualCache = 0;
-    std::list<std::string>::iterator parentIterator = parent.begin();
-    std::vector<CacheServer *> caches = this->dataCenter.caches;
-    for (;;) {
-        if(parent1Count == parent.size() -1) break;
-        std::string gene  = *parentIterator;
-        CacheServer *cacheServer = caches[actualCache];
-        if(freeSpace1 == -1) freeSpace1 = cacheServer->maxCapacity;
-        Video *video = dataCenter.videos[atoi(gene.c_str())];
-        if(video->size <= freeSpace1){
-            freeSpace1 = freeSpace1 - video->size;
-        }
-        else{
-            actualCache++;
-            cacheServer = caches[actualCache];
-            freeSpace1 = cacheServer->maxCapacity ;
-            freeSpace1 = freeSpace1 - video->size ;
-        }
-        parent1Count++;
-        parentIterator++;
-    }
-    return actualCache;
-}
+

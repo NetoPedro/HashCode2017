@@ -14,7 +14,7 @@
 class GeneticAlgorithm {
 public:
     //
-    std::list<std::list<std::string>> population;
+    std::vector<std::list<std::string>> population;
     DataCenter dataCenter;
     void init(int generations,DataCenter dataCenter);
     std::list<std::string> bestSolution ;
