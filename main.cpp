@@ -4,9 +4,9 @@
 
 int main() {
     int initial = time(NULL);
-    DataCenter dataCenter = Importer::import("../Input/videos_worth_spreading.in");
+    DataCenter dataCenter = Importer::import("../Input/ewf.txt");
     GeneticAlgorithm *geneticAlgorithm = new GeneticAlgorithm();
-    geneticAlgorithm->init(5,dataCenter);
+    geneticAlgorithm->init(2500,dataCenter);
     std::cout << "Duration " << time(NULL) - initial << std::endl;
 
     return 0;
