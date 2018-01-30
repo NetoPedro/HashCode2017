@@ -14,21 +14,21 @@
 class GeneticAlgorithm {
 public:
     //
-    std::vector<std::list<std::string>> population;
+    std::vector<std::vector<std::string>> population;
     DataCenter dataCenter;
     void init(int generations,DataCenter dataCenter);
-    std::list<std::string> bestSolution ;
+    std::vector<std::string> bestSolution ;
     int bestFit ;
     int numberOfRequests = 0;
-    std::map<std::list<std::string>,int> oldPopulationResults;
+    std::map<std::vector<std::string>,int> oldPopulationResults;
 private:
     float generateInitialPopulation(int populationElementsCount);
-    float fitness(std::list<std::string> chromosome) ;
+    float fitness(std::vector<std::string> chromosome) ;
     void selection();
     void mutation();
     void crossover();
     void findNumberOfRequests();
-    int findMaxCacheNumber(std::list<std::string> parent);
+    int findMaxCacheNumber(std::vector<std::string> parent);
 };
 
 

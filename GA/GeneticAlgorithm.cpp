@@ -20,7 +20,7 @@ void GeneticAlgorithm::init(int generations, DataCenter dataCenter) {
     this->dataCenter = dataCenter ;
     srand (time(NULL));
     findNumberOfRequests();
-    this->population = std::vector<std::list<std::string>>(POPULATION_SIZE * 2);
+    this->population = std::vector<std::vector<std::string>>(POPULATION_SIZE * 2);
     this->generateInitialPopulation(POPULATION_SIZE);
     for (int i = 0; i < generations; ++i) {
         std::cout << "Geração " << i << std::endl;
@@ -35,7 +35,7 @@ void GeneticAlgorithm::init(int generations, DataCenter dataCenter) {
     }
     std::cout << "Pop Size" << this->population.size() << " "  << std::endl;
 
-    for (std::list<std::string> strings : this->population) {
+    for (std::vector<std::string> strings : this->population) {
         for(std::string string : strings){
             std::cout << string << " " ;
         }
@@ -58,7 +58,7 @@ void GeneticAlgorithm::init(int generations, DataCenter dataCenter) {
  * @param geneSize Size of the chromosome
  */
 void GeneticAlgorithm::crossover() {
-    std::list<int> newMembers;
+    std::vector<int> newMembers;
     std::vector<CacheServer*> caches = this->dataCenter.caches;
     for(CacheServer *cacheServer : caches){
         cacheServer->videos.clear();
@@ -67,12 +67,12 @@ void GeneticAlgorithm::crossover() {
     int point1;
 
 
-    //std::vector<std::list<std::string>>::iterator iterator = descendants->begin();
+    //std::vector<std::vector<std::string>>::iterator iterator = descendants->begin();
     for (int j = 0; j < POPULATION_SIZE ; j+=2) {
         //auto it1 = std::next(this->population.begin(), j);
-        std::list<std::string> parent1 = this->population[j];
+        std::vector<std::string> parent1 = this->population[j];
        // auto it2 = std::next(this->population.begin(), j+1);
-        std::list<std::string> parent2 = this->population[j+1];
+        std::vector<std::string> parent2 = this->population[j+1];
         int cacheSize1 = findMaxCacheNumber(parent1) ;
         int cacheSize2 = findMaxCacheNumber(parent2) ;
         if (cacheSize1 > cacheSize2){
@@ -85,14 +85,14 @@ void GeneticAlgorithm::crossover() {
        // point1 = rand() % (cacheCount - 1) + 1;
 
 
-        std::list<std::string>::iterator parent1Iterator = parent1.begin();
-        std::list<std::string>::iterator parent2Iterator = parent2.begin();
+        std::vector<std::string>::iterator parent1Iterator = parent1.begin();
+        std::vector<std::string>::iterator parent2Iterator = parent2.begin();
 
-        std::list<std::string> descendant1 = *(new std::list<std::string>() );
-        std::list<std::string>::iterator descandant1Iterator = descendant1.begin();
-        std::list<std::string> *descendant2 = new std::list<std::string>() ;
-        std::list<std::string>::iterator descandant2Iterator = descendant2->begin();
-        //std::list<CacheServer*>::iterator cacheIterator1 = caches.begin();
+        std::vector<std::string> descendant1 = *(new std::vector<std::string>() );
+        std::vector<std::string>::iterator descandant1Iterator = descendant1.begin();
+        std::vector<std::string> *descendant2 = new std::vector<std::string>() ;
+        std::vector<std::string>::iterator descandant2Iterator = descendant2->begin();
+        //std::vector<CacheServer*>::iterator cacheIterator1 = caches.begin();
         int parent1Count = 0;
         int parent2Count = 0;
         int actualCache = 0;
@@ -132,7 +132,7 @@ void GeneticAlgorithm::crossover() {
             parent1Iterator++;
         }
 
-     //   std::list<CacheServer*>::iterator cacheIterator2 = caches.begin();
+     //   std::vector<CacheServer*>::iterator cacheIterator2 = caches.begin();
         int actualCache2 = 0;
         int freeSpace2 = -1 ;
         for (;;) {
@@ -224,18 +224,18 @@ void GeneticAlgorithm::crossover() {
  * Uses Tournament Selection
  */
 void GeneticAlgorithm::selection() {
-   // std::vector<std::list<std::string>> newPop ;
-    //newPop =  std::vector<std::list<std::string>>(POPULATION_SIZE * 2);
+   // std::vector<std::vector<std::string>> newPop ;
+    //newPop =  std::vector<std::vector<std::string>>(POPULATION_SIZE * 2);
     int i = 0 ;
-   // std::vector<std::list<std::string>>::iterator popIt = population.begin();
+   // std::vector<std::vector<std::string>>::iterator popIt = population.begin();
     for (int j = 0; j < POPULATION_SIZE * 2  ; j+=2) {
      //   std::cout << "J = " << j << std::endl;
       //  std::cout << " Pop" << this->population.size() << std::endl;
 
         //auto it1 = std::next(this->population.begin(), j);
-        std::list<std::string> parent1 =  population[j];
+        std::vector<std::string> parent1 =  population[j];
     //    auto it2 = std::next(this->population.begin(), j+1);
-        std::list<std::string> parent2 = population[j+1] ;
+        std::vector<std::string> parent2 = population[j+1] ;
       //  std::cout << "Iniciando Fit1" << std::endl;
 
         float fitness1 = fitness(parent1);
@@ -269,12 +269,12 @@ void GeneticAlgorithm::selection() {
  * Uses random values and check if they are greater than the Mutation Tax defined
  */
 void GeneticAlgorithm::mutation() {
-    for (std::list<std::string> chromosome  : this->population) {
+    for (std::vector<std::string> chromosome  : this->population) {
         int rand = std::rand();
         if (rand <= MUTATION_TAX){
             int randomGeneValue = std::rand() * (dataCenter.videos.size()-1);
             int randomGene = std::rand() * (chromosome.size()-1);
-            std::list<std::string>::iterator iterator = chromosome.begin();
+            std::vector<std::string>::iterator iterator = chromosome.begin();
             std::advance(iterator,randomGene);
             *iterator = std::to_string(randomGeneValue);
         }
@@ -286,8 +286,8 @@ void GeneticAlgorithm::mutation() {
  * @param chromosome Chromosome to be analysed
  * @return Returns the fitness value
  */
-float GeneticAlgorithm::fitness(std::list<std::string> chromosome) {
-    std::map<std::list<std::string>,int>::iterator iterator = oldPopulationResults.find( chromosome );
+float GeneticAlgorithm::fitness(std::vector<std::string> chromosome) {
+    std::map<std::vector<std::string>,int>::iterator iterator = oldPopulationResults.find( chromosome );
     if(iterator != oldPopulationResults.end())
         return iterator->second;
    /* if (oldPopulationResults.count(chromosome)){
@@ -361,11 +361,11 @@ float GeneticAlgorithm::fitness(std::list<std::string> chromosome) {
 float GeneticAlgorithm::generateInitialPopulation(int populationElementsCount) {
     int cacheCount = dataCenter.caches.size();
     int videosCount = dataCenter.videos.size();
-    //std::list<std::list<std::string>>::iterator populationIterator = population.begin();
+    //std::vector<std::vector<std::string>>::iterator populationIterator = population.begin();
     srand (time(NULL));
     int bestSolutionFitness = 0;
     for (int i = 0; i < populationElementsCount; ++i) {
-        std::list<std::string> newMember = *(new std::list<std::string>());
+        std::vector<std::string> newMember = *(new std::vector<std::string>());
         int actualCache = 0;
         int freeSpace = -1;
         int newNode = 0;
@@ -407,11 +407,11 @@ float GeneticAlgorithm::generateInitialPopulation(int populationElementsCount) {
 }
 
 
-int GeneticAlgorithm::findMaxCacheNumber(std::list<std::string> parent) {
+int GeneticAlgorithm::findMaxCacheNumber(std::vector<std::string> parent) {
     int freeSpace1 = -1;
     int parent1Count = 0;
     int actualCache = 0;
-    std::list<std::string>::iterator parentIterator = parent.begin();
+    std::vector<std::string>::iterator parentIterator = parent.begin();
     std::vector<CacheServer *> caches = this->dataCenter.caches;
     for (;;) {
         if(parent1Count == parent.size() -1) break;
