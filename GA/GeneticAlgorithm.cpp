@@ -287,57 +287,69 @@ void GeneticAlgorithm::mutation() {
  * @return Returns the fitness value
  */
 float GeneticAlgorithm::fitness(std::list<std::string> chromosome) {
-    std::vector<CacheServer*> caches = this->dataCenter.caches;
-    for(CacheServer* cacheServer : caches){
-        cacheServer->videos.clear();
-    }
-    int actualCache = 0;
-    int freeSpace = -1 ;
-    for (std::string gene : chromosome) {
-        CacheServer *cacheServer = caches[actualCache];
-        if(freeSpace == -1) freeSpace = cacheServer->maxCapacity;
-        Video video = dataCenter.videos[atoi(gene.c_str())];
-        if(video.size <= freeSpace){
-            cacheServer->videos.insert(cacheServer->videos.begin(),video.id);
-          //  caches[actualCache] = cacheServer;
-            freeSpace = freeSpace - video.size;
+    std::map<std::list<std::string>,int>::iterator iterator = oldPopulationResults.find( chromosome );
+    if(iterator != oldPopulationResults.end())
+        return iterator->second;
+   /* if (oldPopulationResults.count(chromosome)){
+        return oldPopulationResults[chromosome];
+    } */
+
+
+
+        std::vector<CacheServer *> caches = this->dataCenter.caches;
+        for (CacheServer *cacheServer : caches) {
+            cacheServer->videos.clear();
         }
-        else{
-            actualCache++;
-            cacheServer = caches[actualCache];
-            freeSpace = cacheServer->maxCapacity ;
-            cacheServer->videos.insert(cacheServer->videos.begin(),video.id);
-            //caches[actualCache] = cacheServer;
-            freeSpace = freeSpace - video.size ;
+        int actualCache = 0;
+        int freeSpace = -1;
+        for (std::string gene : chromosome) {
+            CacheServer *cacheServer = caches[actualCache];
+            if (freeSpace == -1) freeSpace = cacheServer->maxCapacity;
+            Video video = dataCenter.videos[atoi(gene.c_str())];
+            if (video.size <= freeSpace) {
+                cacheServer->videos.insert(cacheServer->videos.begin(), video.id);
+                //  caches[actualCache] = cacheServer;
+                freeSpace = freeSpace - video.size;
+            } else {
+                actualCache++;
+                cacheServer = caches[actualCache];
+                freeSpace = cacheServer->maxCapacity;
+                cacheServer->videos.insert(cacheServer->videos.begin(), video.id);
+                //caches[actualCache] = cacheServer;
+                freeSpace = freeSpace - video.size;
+            }
         }
-    }
-    float fitnessValue  = 0 ;
-    for (Endpoint endpoint : this->dataCenter.endpoint){
-        for(std::pair<int,int> request : endpoint.requests){
-            int videoId = request.first;
-            int latency = 0;
-            bool inCache = false ;
-            for(std::pair<int,float > cacheConnection : endpoint.cacheLatency){
-                int cacheId = cacheConnection.first ;
-                CacheServer *cache = caches[cacheId];
-                for(int vId : cache->videos){
-                    if (vId == videoId){
-                        if (!inCache) latency = endpoint.serverLatency - endpoint.cacheLatency[cache->id];
-                        else{
-                            if (latency + endpoint.serverLatency > request.second) latency = endpoint.serverLatency - endpoint.cacheLatency[cache->id];
+        float fitnessValue = 0;
+        for (Endpoint endpoint : this->dataCenter.endpoint) {
+            for (std::pair<int, int> request : endpoint.requests) {
+                int videoId = request.first;
+                int latency = 0;
+                bool inCache = false;
+                for (std::pair<int, float> cacheConnection : endpoint.cacheLatency) {
+                    int cacheId = cacheConnection.first;
+                    CacheServer *cache = caches[cacheId];
+                    for (int vId : cache->videos) {
+                        if (vId == videoId) {
+                            if (!inCache) latency = endpoint.serverLatency - endpoint.cacheLatency[cache->id];
+                            else {
+                                if (latency + endpoint.serverLatency > request.second) latency =
+                                                                                               endpoint.serverLatency -
+                                                                                               endpoint.cacheLatency[cache->id];
+                            }
+                            inCache = true;
+                            break;
                         }
-                        inCache = true;
-                        break;
                     }
                 }
+                if (!inCache) latency = 0;
+                fitnessValue += latency * request.second;
             }
-            if (!inCache) latency = 0 ;
-            fitnessValue += latency * request.second;
         }
-    }
-    fitnessValue = fitnessValue/numberOfRequests;
- //   std::cout << "Fitness == " << fitnessValue * 1000<< std::endl;
-    return fitnessValue * -1;
+        fitnessValue = fitnessValue / numberOfRequests;
+        //   std::cout << "Fitness == " << fitnessValue * 1000<< std::endl;
+        oldPopulationResults[chromosome] = fitnessValue * -1;
+        return fitnessValue * -1;
+
 }
 //TODO Find the fittest
 /**

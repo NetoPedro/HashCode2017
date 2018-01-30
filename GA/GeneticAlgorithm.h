@@ -20,7 +20,7 @@ public:
     std::list<std::string> bestSolution ;
     int bestFit ;
     int numberOfRequests = 0;
-
+    std::map<std::list<std::string>,int> oldPopulationResults;
 private:
     float generateInitialPopulation(int populationElementsCount);
     float fitness(std::list<std::string> chromosome) ;
